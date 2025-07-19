@@ -130,4 +130,7 @@ svg {
 body {
   font-family: sans-serif;
   font-size: 125%;
+  max-width: 50em;
+  margin-right: auto;
+  margin-left: auto;
 }
