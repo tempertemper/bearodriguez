@@ -1,0 +1,86 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html). Each change can include things under the following categories:
+
+- Adds
+- Changes
+- Removes
+- Fixes
+
+----------
+
+## [Unreleased]
+
+----------
+
+
+## [1.2.0] - 2025-03-24
+
+### Changes
+- Updates node version to 22.14.0
+- Upgrades to Eleventy version 3.0.0
+
+
+## [1.1.1] - 2024-03-19
+
+### Changes
+- Updates node version to 20.11.1
+
+
+## [1.1.0] - 2023-06-03
+
+### Changes
+- Upgrades to Eleventy 2.0.1
+- Uses CSS instead of SCSS
+
+
+## [1.0.7] - 2023-01-25
+
+### Adds
+- Adds 404 page
+
+
+## [1.0.6] - 2023-01-25
+
+### Changes
+- Updates to node 19.0.5
+- Updates eleventy to version 1.0.2
+- Updates autoprefixer to version 10.4.13
+- Updates postcss-cli to version 10.1.0
+
+
+## [1.0.5] - 2022-07-26
+
+### Changes
+- Adds version tags using GitHub Action rather than version-bump-prompt
+
+
+## [1.0.4] - 2022-07-26
+
+### Changes
+- Updates eleventy to 1.0.1 along with some other minor package bumps
+- Updates node version to 16.16.0
+
+
+## [1.0.3] - 2021-09-02
+
+### Adds
+- Adds HTML dark mode meta tag
+
+
+## [1.0.2] - 2021-08-31
+
+### Changes
+- Updates to use node version 16
+
+
+## [1.0.1] - 2021-08-31
+
+### Fixes
+- Updates npm packages to fix vulnerabilities
+
+
+## [1.0.0] - 2021-03-29
+
+### Adds
+- Initial Eleventy base setup

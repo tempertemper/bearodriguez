@@ -1,0 +1,29 @@
+{
+  "name": "eleventy-base",
+  "version": "1.2.0",
+  "description": "This is the starting point for Eleventy projects",
+  "scripts": {
+    "clear": "rm -rf dist",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "npm run clear && npm run build:eleventy",
+    "serve": "npx @11ty/eleventy --serve --quiet",
+    "start": "npm run clear && npm run serve",
+    "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
+    "bump:major": "bump major --commit 'Bumps version number to %s' src/site/_data/site.json *.json",
+    "bump:minor": "bump minor --commit 'Bumps version number to %s' src/site/_data/site.json *.json",
+    "bump:patch": "bump patch --commit 'Bumps version number to %s' src/site/_data/site.json *.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tempertemper/eleventy-base.git"
+  },
+  "author": "Martin Underhill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tempertemper/eleventy-base/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "version-bump-prompt": "^6.1.0"
+  }
+}
