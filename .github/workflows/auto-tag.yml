@@ -3,11 +3,21 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: Klemensas/action-autotag@stable
-      with:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/checkout@v4
+
+      # Auto-tag based on your package.json version
+      - uses: butlerlogic/action-autotag@stable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          strategy: package         # reads version from package.json
+          tag_prefix: v             # creates tags like v1.2.3
+          tag_message: "Release {tag}"
