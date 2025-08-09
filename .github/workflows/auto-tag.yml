@@ -1,8 +1,7 @@
 name: Create tag
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -12,10 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      # Create vX.Y.Z from package.json version if it changed
-      - name: Create tag from package.json
-        id: create_tag
-        uses: jaywcjlove/create-tag-action@v2.2.0
         with:
-          package-path: ./package.json
+          fetch-depth: 0
+      - name: Tag v<package.json version> if missing
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v$VERSION"
+          git fetch --tags
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists; skipping"
+            exit 0
+          fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag -a "$TAG" -m "Release $TAG"
+          git push origin "$TAG"
