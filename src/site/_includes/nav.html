@@ -1,0 +1,21 @@
+<nav aria-label="{{ label }}" {%- if label == "Primary" %} class="primary"{% endif %}>
+    <ul>
+    {%- for item in nav %}
+    {%- set currentUrl = page.url  | replace(".html", "") %}
+    {%- set isCurrent = item.url == currentUrl %}
+    {%- if label == "Primary" %}
+        <li>
+            <a href="{{ item.url | url }}" {%- if isCurrent %} aria-current="page"{% endif %}>
+                {{- item.title -}}
+            </a>
+        </li>
+    {%- elif not isCurrent %}
+        <li>
+            <a href="{{ item.url | url }}">
+                {{- item.title -}}
+            </a>
+        </li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+</nav>

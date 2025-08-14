@@ -134,3 +134,34 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.primary ul {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  flex-wrap: wrap;
+}
+
+nav.primary li {
+  display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
