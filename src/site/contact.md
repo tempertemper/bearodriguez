@@ -5,4 +5,4 @@ layout: default
 permalink: contact.html
 ---
 
-Contact Bea: [bea@bearodriguez.com](mailto:bea+website@bearodriguez.com)
+Contact Bea: [hello@bearodriguez.com](mailto:hello+website@bearodriguez.com)
