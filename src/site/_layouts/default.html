@@ -2,6 +2,16 @@
 <html xml:lang="en" lang="en">
     {% include "head.html" %}
     <body>
+        <header>
+            <a href="/">BeaRodriguez.com<span class="visually-hidden">, go to homepage</span></a>
+            {%- set nav = [
+                { title: 'Expertise', url: '/expertise/' },
+                { title: 'About', url: '/about' },
+                { title: 'Contact', url: '/contact' }
+            ] %}
+            {% set label = "Primary" %}
+            {% include "nav.html" %}
+        </header>
         <h1>{{ title }}</h1>
         {{ content | safe }}
         <style>
