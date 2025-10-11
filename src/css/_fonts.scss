@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Lora";
+  src:
+    local("Lora"),
+    url("/assets/fonts/Lora-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src:
+    local("Nunito"),
+    url("/assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src:
+    local("Nunito Italic"),
+    url("/assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+

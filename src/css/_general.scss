@@ -1,0 +1,70 @@
+::selection {
+  background: white;
+  color: black;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  max-width: 35em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+  padding: 1em;
+  font-size: 125%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", georgia, serif;
+  line-height: 1.1;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 30em) {
+
+  body {
+    font-size: 150%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.primary ul {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+nav.primary li {
+  display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+blockquote {
+  border-left: solid .25em white;
+  padding-left: .75em;
+  margin-left: -1em;
+}
