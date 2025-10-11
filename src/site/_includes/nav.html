@@ -1,21 +1,20 @@
 <nav aria-label="{{ label }}" {%- if label == "Primary" %} class="primary"{% endif %}>
     <ul>
-    {%- for item in nav %}
-    {%- set currentUrl = page.url  | replace(".html", "") %}
-    {%- set isCurrent = item.url == currentUrl %}
-    {%- if label == "Primary" %}
-        <li>
-            <a href="{{ item.url | url }}" {%- if isCurrent %} aria-current="page"{% endif %}>
-                {{- item.title -}}
-            </a>
-        </li>
-    {%- elif not isCurrent %}
-        <li>
-            <a href="{{ item.url | url }}">
-                {{- item.title -}}
-            </a>
-        </li>
-    {%- endif %}
-    {%- endfor %}
-  </ul>
+        {%- for item in nav | ordered %}
+            {%- set isCurrent = (item.url | url) == (page.url | url) %}
+            {%- if label == "Primary" %}
+                <li>
+                    <a href="{{ item.url | url }}" {%- if isCurrent %} aria-current="page"{% endif %}>
+                        {{ item.data.title or item.title }}
+                    </a>
+                </li>
+            {%- elif item.fileSlug != "index" and not isCurrent %}
+                <li>
+                    <a href="{{ item.url | url }}">
+                        {{ item.data.title or item.title }}
+                    </a>
+                </li>
+            {%- endif %}
+        {%- endfor %}
+    </ul>
 </nav>
