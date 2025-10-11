@@ -1,10 +1,10 @@
 # Build commands
 
-# Production build command
+## Production build command
 [build]
   command = "npm run build"
 
-# Non-production build command
+## Non-production build command
 [context.deploy-preview]
   command = "npm run staging"
 
@@ -12,11 +12,50 @@
   command = "npm run staging"
 
 
+# Security and cacheing
+
+[[headers]]
+for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), hid=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), usb=(), screen-wake-lock=(), xr-spatial-tracking=(), browsing-topics=()"
+    Content-Security-Policy = "default-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'"
+
+## Cache fonts
+[[headers]]
+  for = "/assets/fonts/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+
 # Redirects
 
-# Redirect default Netlify subdomain to primary domain
+# Redirect default Netlify subdomains to primary domain
 [[redirects]]
-  from = "https://example.netlify.com/*"
-  to = "https://example.com/:splat"
+  from = "https://bearodriguez.netlify.com/*"
+  to = "https://www.bearodriguez.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+    from = "https://bearodriguez.netlify.app/*"
+    to = "https://www.bearodriguez.com/:splat"
+    status = 301
+    force = true
+
+# Collapse HTTP apex → HTTPS www in one hop
+[[redirects]]
+  from = "http://bearodriguez.com/*"
+  to   = "https://www.bearodriguez.com/:splat"
+  status = 301
+  force = true
+
+# Ensure HTTP www → HTTPS www
+[[redirects]]
+  from = "http://www.bearodriguez.com/*"
+  to   = "https://www.bearodriguez.com/:splat"
   status = 301
   force = true
