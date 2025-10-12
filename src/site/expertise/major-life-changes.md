@@ -1,6 +1,6 @@
 ---
 title: Major life changes
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Support through big life transitions, helping you find clarity, confidence, and direction as things shift.
 permalink: expertise/major-life-changes.html
 order: 7
 ---

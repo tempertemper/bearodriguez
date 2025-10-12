@@ -1,6 +1,6 @@
 ---
 title: Anxiety
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Therapy to understand what drives your anxiety and learn ways to feel calmer, more grounded, and in control.
 permalink: expertise/anxiety.html
 order: 1
 ---

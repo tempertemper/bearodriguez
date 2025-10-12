@@ -1,6 +1,6 @@
 ---
 title: Relationship difficulties
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Counselling to improve communication, understand patterns, and build more balanced, fulfilling relationships.
 permalink: expertise/relationship-difficulties.html
 order: 4
 ---

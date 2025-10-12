@@ -1,6 +1,6 @@
 ---
 title: Grief
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Space to process loss at your own pace and begin rebuilding a sense of stability, meaning, and peace.
 permalink: expertise/grief.html
 order: 6
 ---

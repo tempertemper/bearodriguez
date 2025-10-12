@@ -1,6 +1,6 @@
 ---
 title: Eating disorders
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Support for difficulties with food, body image, and control, helping you build a kinder, more balanced relationship with yourself.
 permalink: expertise/eating-disorders.html
 order: 5
 ---

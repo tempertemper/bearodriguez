@@ -1,6 +1,6 @@
 ---
 title: What to expect
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Find out what starting therapy is like, from the first session to how regular counselling can help you grow and feel supported.
 layout: default
 permalink: starting-therapy.html
 ---
