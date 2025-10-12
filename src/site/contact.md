@@ -7,6 +7,13 @@ permalink: contact.html
 
 Starting therapy can feel like a big step; reaching out is the first part of that. You're welcome to get in touch to ask questions or arrange a free initial consultation.
 
-Telephone: [07480 625258](tel:00447480625258)
-Email: [hello@bearodriguez.com](mailto:hello+website@bearodriguez.com)
-Location: In person in Newcastle upon Tyne and Tynemouth, or online wherever you are
+<dl>
+    <dt>Email</dt>
+        <dd><a href="mailto:hello+website@bearodriguez.com">hello@bearodriguez.com</a></dd>
+    <dt>Telephone</dt>
+        <dd><a href="tel:00447480625258">07480 625258</a></dd>
+    <dt>Location</dt>
+        <dd>In person in Jesmond, Newcastle upon Tyne</dd>
+        <dd>In person in Tynemouth</dd>
+        <dd>Online wherever you are</dd>
+</dl>
