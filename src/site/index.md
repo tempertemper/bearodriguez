@@ -20,9 +20,12 @@ I adapt therapy to your individual needs. Together, we’ll explore how your pas
 
 ## I can help with
 
-{%- set nav = collections.expertise %}
-{%- set label = "Expertise" %}
+{%- set nav = collections.expertise -%}
+{%- set label = "Expertise" -%}
+{%- set max = 3 -%} {# omit or change this to control length #}
 {% include "nav.html" %}
+
+[View all specialisms](/expertise/)
 
 
 ## Starting therapy

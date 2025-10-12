@@ -1,19 +1,16 @@
 <nav aria-label="{{ label }}" {%- if label == "Primary" %} class="primary"{% endif %}>
     <ul>
+        {%- set printed = 0 %}
         {%- for item in nav | ordered %}
             {%- set isCurrent = (item.url | url) == (page.url | url) %}
-            {%- if label == "Primary" %}
+            {%- set canShow = (label == "Primary") or (item.fileSlug != "index" and not isCurrent) %}
+            {%- if canShow and (not max or printed < max) %}
                 <li>
-                    <a href="{{ item.url | url }}" {%- if isCurrent %} aria-current="page"{% endif %}>
+                    <a href="{{ item.url | url }}"{% if label == "Primary" and isCurrent %} aria-current="page"{% endif %}>
                         {{ item.data.title or item.title }}
                     </a>
                 </li>
-            {%- elif item.fileSlug != "index" and not isCurrent %}
-                <li>
-                    <a href="{{ item.url | url }}">
-                        {{ item.data.title or item.title }}
-                    </a>
-                </li>
+                {%- set printed = printed + 1 %}
             {%- endif %}
         {%- endfor %}
     </ul>
