@@ -1,6 +1,6 @@
 ---
 title: Depression
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Counselling to explore the roots of low mood and rediscover balance, motivation, and a renewed sense of self.
 permalink: expertise/depression.html
 order: 2
 ---

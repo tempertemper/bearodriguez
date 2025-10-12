@@ -1,6 +1,6 @@
 ---
-title: Expertise
-description: Bea Rodriguez is a psychotherapeutic councillor.
+title: I can help with
+description: Explore the areas Bea works with, from anxiety and depression to relationship issues and major life changes.
 layout: expertise
 permalink: expertise/index.html
 tags: []

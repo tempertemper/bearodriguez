@@ -1,6 +1,6 @@
 ---
 title: Low self-esteem
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Therapy to build self-acceptance, confidence, and a more compassionate view of yourself.
 permalink: expertise/low-self-esteem.html
 order: 3
 ---

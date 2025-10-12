@@ -1,6 +1,6 @@
 ---
 title: About Bea
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Learn about Bea’s counselling approach and experience, creating a warm, accepting space for personal growth and understanding.
 layout: default
 permalink: about.html
 ---

@@ -1,6 +1,6 @@
 ---
 title: Therapy to help you feel seen, heard, and strong
-description: Personalised therapy for anxiety, low self-esteem and attachment issues, helping create balance and peace of mind.
+description: Compassionate counselling in Newcastle upon Tyne and online wherever you are, helping you feel more grounded, confident, and understood.
 layout: default
 ---
 
@@ -22,13 +22,13 @@ I adapt therapy to your individual needs. Together, we’ll explore how your pas
 
 {%- set nav = collections.expertise -%}
 {%- set label = "Expertise" -%}
-{%- set max = 3 -%} {# omit or change this to control length #}
+{%- set max = 3 -%}
 {% include "nav.html" %}
 
 [View all specialisms](/expertise/)
 
 
-## Starting therapy
+## What to expect
 
 When you begin therapy with me, you’ll have space to slow down, talk openly, and be heard without judgment.
 

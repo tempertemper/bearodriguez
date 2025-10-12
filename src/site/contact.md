@@ -1,6 +1,6 @@
 ---
 title: Contact Bea
-description: Bea Rodriguez is a psychotherapeutic councillor.
+description: Get in touch to ask questions or arrange a free initial consultation for in-person or online therapy.
 layout: default
 permalink: contact.html
 ---
