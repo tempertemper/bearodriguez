@@ -1,6 +1,6 @@
 {
   "name": "eleventy-base",
-  "version": "1.2.1",
+  "version": "0.0.0",
   "description": "This is the starting point for Eleventy projects",
   "scripts": {
     "clear": "rm -rf dist",
@@ -9,9 +9,10 @@
     "serve": "npx @11ty/eleventy --serve --quiet",
     "start": "npm run clear && npm run serve",
     "staging": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
-    "bump:major": "bump major --commit 'Bumps version number to %s' src/site/_data/site.json *.json",
-    "bump:minor": "bump minor --commit 'Bumps version number to %s' src/site/_data/site.json *.json",
-    "bump:patch": "bump patch --commit 'Bumps version number to %s' src/site/_data/site.json *.json"
+    "version": "node scripts/sync-site-version.js",
+    "bump:major": "npm version major --no-git-tag-version -m \"Bumps version number to %s\"",
+    "bump:minor": "npm version minor --no-git-tag-version -m \"Bumps version number to %s\"",
+    "bump:patch": "npm version patch --no-git-tag-version -m \"Bumps version number to %s\""
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "sass": "^1.93.2",
-    "version-bump-prompt": "^6.1.0"
+    "sass": "^1.93.2"
   }
 }
