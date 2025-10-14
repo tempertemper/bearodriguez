@@ -1,12 +1,10 @@
 ---
-title: Therapy to help you feel seen, heard, and strong
+title: Counselling for self-understanding and growth
 description: Compassionate counselling in Newcastle upon Tyne and online wherever you are, helping you feel more grounded, confident, and understood.
 layout: default
 ---
 
-In-person counselling in Newcastle upon Tyne and online wherever you are.
-
-In a safe and welcoming space, we’ll explore what’s holding you back and help you build lasting confidence and self-understanding. Whether you’re feeling anxious, overwhelmed, or stuck in old patterns, therapy can help you make sense of what’s going on and begin to feel more grounded.
+Therapy offers a space to slow down and listen to yourself in new ways. Together, we’ll explore your experiences with curiosity and care, helping you reconnect with your inner resources and move toward balance and self-trust.
 
 
 ## My approach
