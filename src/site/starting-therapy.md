@@ -5,15 +5,19 @@ layout: default
 permalink: starting-therapy.html
 ---
 
-Starting therapy can feel daunting, especially if it's your first time or if you've had mixed experiences in the past. You might be wondering what to say, what to expect, or whether it will help. That's completely normal; we'll take things one step at a time.
+When you begin therapy with me, you'll have a space where you can talk openly and be met with warmth, curiosity, and no judgment. Whether you're feeling anxious or low, finding relationships difficult, or noticing unhelpful patterns that keep repeating — we'll work together to make sense of what's going on.
 
-When you begin therapy with me, you'll have space to slow down, talk openly, and be heard without judgment.
+Together, we'll explore the links between your thoughts, emotions, behaviours, and past experiences. Over time, this process can help you understand yourself more deeply and respond to life with greater compassion and clarity.
 
-I'll help you make sense of what's happening for you, whether that's feeling anxious or low, struggling in relationships, or trying to understand patterns that keep repeating. Together, we'll begin to notice links between your feelings, thoughts, and past experiences, so you can understand yourself with more compassion and clarity.
 
-The first session is a chance for us to get to know each other and see how it feels to work together. We'll talk about what's brought you here and what you'd like to gain from therapy, but there's no pressure to have clear goals right away; some people simply want a space to talk and see what unfolds.
+## The First Session
 
-Over time, therapy can help you:
+Our first session is a chance to get to know each other and see how it feels to work together. We'll talk about what's brought you to therapy and what you're hoping for — but there's no pressure to have clear goals straight away. Some people come simply for a space to talk and see what unfolds.
+
+
+## How Therapy Can Help
+
+Therapy can support you to:
 
 - Feel calmer and more grounded when life feels overwhelming
 - Build confidence and a stronger sense of who you are
@@ -21,6 +25,17 @@ Over time, therapy can help you:
 - Improve relationships and communication
 - Develop practical ways to manage anxiety, stress, or low mood
 
-Sessions last 50 minutes and take place weekly, either in-person in Newcastle upon Tyne, Tynemouth, or online wherever you are. The consistency of weekly sessions helps the work deepen and gives you a regular space to process what's happening in your life.
 
-Most importantly, therapy moves at your pace. There's no right or wrong way to start, just a genuine space where you can begin to feel seen, supported, and understood as you make meaningful changes.
+## Sessions and Availability
+
+Sessions last 50 minutes and take place weekly — either:
+
+- **In person** in Newcastle upon Tyne or Tynemouth
+- **Online** via secure video, from wherever you are
+
+The consistency of weekly sessions helps the work go deeper and gives you regular time to reflect, process, and grow.
+
+
+## You Set the Pace
+
+There's no right or wrong way to start therapy. Wherever you're coming from, you'll be met with care, respect, and curiosity. The space is yours — to feel seen, heard, and supported as you begin to make meaningful change.
