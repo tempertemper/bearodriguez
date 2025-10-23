@@ -39,13 +39,6 @@ Each session moves at your pace, and everything you share is treated with comple
 [What to expect](/starting-therapy)
 
 
-## In their words
-
-> I was really nervous about starting therapy, but Bea made me feel safe and understood from the very first session. She listened without judgment and helped me find clarity when everything felt overwhelming.
->
-> Over time I’ve gained confidence and new ways to cope with stress. I’m so grateful for her support.
-
-
 ## Ready to begin?
 
 Therapy can bring clarity, balance, and emotional strength, and you don’t have to take the first step alone.

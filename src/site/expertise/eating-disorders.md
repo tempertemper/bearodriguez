@@ -15,5 +15,3 @@ Therapy can help you:
 - Develop healthier ways to manage difficult feelings
 - Strengthen self-esteem and body acceptance
 - Rebuild a more balanced relationship with food
-
-You don't need a formal diagnosis to seek support. Whatever your experience with eating or body image, therapy can help you move toward a more compassionate and peaceful relationship with yourself.

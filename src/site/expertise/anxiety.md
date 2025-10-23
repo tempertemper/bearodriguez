@@ -5,15 +5,13 @@ permalink: expertise/anxiety.html
 order: 1
 ---
 
-Anxiety can show up in many ways, such as constant worry, racing thoughts, physical tension, or difficulty relaxing. You might feel on edge much of the time, find it hard to switch off, or avoid situations that feel overwhelming.
+Anxiety is a natural response to stress, but sometimes it can start to take over. You might feel constantly on edge, caught in racing thoughts, or find it hard to switch off and relax.
 
-In therapy, we'll explore what's driving your anxiety and how it affects your thoughts, emotions, and body. Understanding the patterns behind anxious feelings can help you respond differently and regain a sense of calm and control.
+Therapy offers a calm, supportive space to understand what's driving your anxiety and how it affects your thoughts, emotions, and body. With greater awareness, you can begin to respond differently and feel more in control.
 
 Therapy can help you:
 
-- Recognise triggers and underlying causes of anxiety
-- Develop ways to manage racing thoughts and physical symptoms
+- Recognise triggers and underlying causes
+- Manage racing thoughts and physical tension
 - Build confidence in coping with uncertainty and change
 - Feel more grounded and at ease in daily life
-
-Anxiety is a natural response to stress, but it doesn't have to take over. Therapy offers a steady space to understand it, work through it, and move toward a calmer state of mind.
