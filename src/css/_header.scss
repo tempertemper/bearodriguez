@@ -1,0 +1,21 @@
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.primary ul {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+nav.primary li {
+  display: inline-block;
+}

@@ -1,5 +1,5 @@
 ---
-title: Counselling for self-understanding and growth
+title: Counselling for healing and growth
 description: Compassionate counselling in Newcastle upon Tyne and online wherever you are, helping you feel more grounded, confident, and understood.
 layout: default
 ---

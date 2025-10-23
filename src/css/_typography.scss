@@ -1,0 +1,33 @@
+@use 'mixins';
+@use 'fonts';
+@use 'variables';
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.5;
+  font-size: 125%;
+
+  @media (min-width: 30em) {
+    font-size: 150%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", georgia, serif;
+  line-height: 1.1;
+  margin-top: 1.5em;
+}
+
+blockquote {
+  border-left: solid .25em variables.$colour--black;
+  padding-left: .75em;
+  margin-left: -1em;
+  @include mixins.dark-mode() {
+    border-left-color: solid .25em variables.$colour--white;
+  };
+}
