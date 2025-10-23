@@ -2,19 +2,10 @@
 <html xml:lang="en" lang="en">
     {% include "head.html" %}
     <body>
-        <header>
-            <a href="/">BeaRodriguez.com<span class="visually-hidden">, go to homepage</span></a>
-            {%- set nav = [
-                { title: 'Expertise', url: '/expertise/' },
-                { title: 'Starting therapy', url: '/starting-therapy' },
-                { title: 'About', url: '/about' },
-                { title: 'Contact', url: '/contact' }
-            ] %}
-            {% set label = "Primary" %}
-            {% include "nav.html" %}
-        </header>
+        {% include "header.html" %}
         <h1>{{ title }}</h1>
         {{ content | safe }}
+        {% include "footer.html" %}
         <style>
           @media screen and (prefers-color-scheme: dark) {
             :where(a:link) {color: #9e9eff;}

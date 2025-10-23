@@ -1,3 +1,5 @@
+@use 'variables';
+@use "mixins";
 
 header {
   display: flex;
@@ -5,17 +7,28 @@ header {
   gap: 1em;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
-nav.primary ul {
-  display: flex;
-  flex-direction: row;
-  gap: .5em;
-  flex-wrap: wrap;
-  margin: 0;
+.logo {
+
+  svg {
+    color: variables.$colour--black;
+    @include mixins.dark-mode($colour: variables.$colour--white);
+  }
 }
 
-nav.primary li {
-  display: inline-block;
+nav.primary {
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
 }

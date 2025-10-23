@@ -1,0 +1,16 @@
+<footer>
+    {%- set nav = [
+        { title: 'About', url: '/about' },
+        { title: 'Expertise', url: '/expertise/' },
+        { title: 'What to expect', url: '/starting-therapy' },
+        { title: 'Contact', url: '/contact' }
+    ] %}
+    {% set label = "Quick links" %}
+    {% include "nav.html" %}
+    <ul>
+        <li>Email <a href="mailto:hello+website@bearodriguez.com">hello@bearodriguez.com</a></li>
+        <li>Telephone <a href="tel:00447480625258">07480 625258</a></li>
+    </ul>
+    {% include "svg/logo.svg" %}
+    <p>&copy; 2025 Bea Rodriguez</p>
+</footer>
