@@ -21,10 +21,26 @@ h6 {
   font-family: "Lora", georgia, serif;
   line-height: 1.1;
   margin-top: 1.5em;
+  font-weight: 500;
 }
 
+h1 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  + p {
+    margin-top: 1em;
+  }
+}
+
+
+
 blockquote {
-  border-left: solid .25em variables.$colour--black;
+  border-left: solid .25em variables.$colour--grey-dark;
   padding-left: .75em;
   margin-left: -1em;
   @include mixins.dark-mode() {

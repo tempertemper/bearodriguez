@@ -1,3 +1,5 @@
+@use 'variables';
+
 @mixin dark-mode($background: null, $colour: null) {
 
   @media screen and (prefers-color-scheme: dark), screen and (prefers-contrast: more) {
@@ -19,4 +21,38 @@
       @content;
     }
   }
+}
+
+@mixin highlight($background: null, $colour: null) {
+  $_background: if($background != null, $background, variables.$colour--teal);
+  $_foreground: if($colour != null, $colour, variables.$colour--white);
+
+  background-color: $_background;
+  color: $_foreground;
+  position: relative;
+  display: flow-root;
+  padding-bottom: variables.$section-spacing;
+  margin-top: 3em;
+
+  hgroup + & {
+    margin-top: 0;
+  }
+
+  h2,
+  & + h2 {
+    margin-top: 2em;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $_background;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+  }
+
+  &:before { right: 100% }
+  &:after  { left: 100% }
 }

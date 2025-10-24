@@ -2,7 +2,7 @@
 @use 'variables';
 
 ::selection {
-  background: variables.$colour--black;
+  background: variables.$colour--grey-dark;
   color: variables.$colour--white;
   @include mixins.dark-mode(variables.$colour--white, variables.$colour--black);
 }
@@ -11,8 +11,30 @@ body {
   max-width: 35em;
   margin-right: auto;
   margin-left: auto;
-  padding: 1em;
+  padding-top: 1em;
   background: variables.$colour--white;
-  color: variables.$colour--black;
-  @include mixins.dark-mode(variables.$colour--black, variables.$colour--white);
+  color: variables.$colour--grey-dark;
+  @include mixins.dark-mode(variables.$colour--grey-dark, variables.$colour--white);
+}
+
+:link,
+:visited {
+  color: inherit;
+}
+
+.highlight {
+
+  &:nth-of-type(odd) {
+    @include mixins.highlight(
+      $background: variables.$colour--teal,
+      $colour: variables.$colour--white
+    )
+  }
+
+  &:nth-of-type(even) {
+    @include mixins.highlight(
+      $background: variables.$colour--yellow,
+      $colour: variables.$colour--black
+    )
+  }
 }

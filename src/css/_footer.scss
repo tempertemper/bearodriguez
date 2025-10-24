@@ -1,0 +1,11 @@
+@use 'mixins';
+@use 'variables';
+
+footer {
+  padding-top: variables.$section-spacing;
+  @include mixins.highlight(variables.$colour--grey-dark);
+
+  @include mixins.dark-mode() {
+    @include mixins.highlight(variables.$colour--black)
+  }
+}

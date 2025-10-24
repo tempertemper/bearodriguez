@@ -13,12 +13,13 @@ header {
 .logo {
 
   svg {
-    color: variables.$colour--black;
+    color: variables.$colour--grey-dark;
     @include mixins.dark-mode($colour: variables.$colour--white);
   }
 }
 
 nav.primary {
+  margin-bottom: 2em;
 
   ul {
     display: flex;
@@ -31,4 +32,15 @@ nav.primary {
   li {
     display: inline-block;
   }
+}
+
+.intro {
+  background-color: variables.$colour--yellow;
+  color: variables.$colour--black;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+hgroup {
+  margin-bottom: 2em;
 }

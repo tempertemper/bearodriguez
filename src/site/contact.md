@@ -1,11 +1,10 @@
 ---
 title: Contact Bea
 description: Get in touch to ask questions or arrange a free initial consultation for in-person or online therapy.
+intro: Starting therapy can feel like a big step; reaching out is the first part of that. You're welcome to get in touch to ask questions or arrange a free initial consultation.
 layout: default
 permalink: contact.html
 ---
-
-Starting therapy can feel like a big step; reaching out is the first part of that. You're welcome to get in touch to ask questions or arrange a free initial consultation.
 
 <dl>
     <dt>Email</dt>

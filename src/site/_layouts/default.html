@@ -3,7 +3,12 @@
     {% include "head.html" %}
     <body>
         {% include "header.html" %}
-        <h1>{{ title }}</h1>
+        <hgroup>
+            <div class="intro">
+                <h1>{{ title }}</h1>
+                {{ intro }}
+            </div>
+        </hgroup>
         {{ content | safe }}
         {% include "footer.html" %}
         <style>

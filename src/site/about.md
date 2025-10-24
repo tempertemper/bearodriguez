@@ -1,11 +1,10 @@
 ---
 title: About Bea
 description: Learn about Bea's counselling approach and experience, creating a warm, accepting space for personal growth and understanding.
+intro: I love being a counsellor. I'm passionate about supporting people to overcome what's holding them back and to reconnect with who they truly are.
 layout: default
 permalink: about.html
 ---
-
-I love being a counsellor. I'm passionate about supporting people to overcome what's holding them back and to reconnect with who they truly are.
 
 Life's challenges—whether it's loss, change, or unresolved experiences from the past—can leave us feeling stuck, disconnected, or unsure of ourselves. Therapy offers a space to explore these experiences, make sense of them, and move toward greater clarity, confidence, and balance.
 
