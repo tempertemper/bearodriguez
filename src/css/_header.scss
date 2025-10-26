@@ -20,11 +20,16 @@ header {
 
 nav.primary {
   margin-bottom: 2em;
+  font-weight: 500;
+
+  :link {
+    text-decoration: none;
+  }
 
   ul {
     display: flex;
     flex-direction: row;
-    gap: .5em;
+    gap: 1em;
     flex-wrap: wrap;
     margin: 0;
   }

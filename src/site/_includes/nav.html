@@ -6,7 +6,7 @@
             {%- set canShow = (label == "Primary") or (item.fileSlug != "index" and not isCurrent) %}
             {%- if canShow and (not max or printed < max) %}
                 <li>
-                    <a href="{{ item.url | url }}"{% if label == "Primary" and isCurrent %} aria-current="page"{% endif %}>
+                    <a href="{{ item.url | url }}"{% if label == "Primary" and isCurrent %} aria-current="page"{% endif %}{% if item.button %} data-button{% endif %}>
                         {{ item.data.title or item.title }}
                     </a>
                 </li>

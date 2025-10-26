@@ -8,7 +8,7 @@
 }
 
 body {
-  max-width: 35em;
+  max-width: 50em;
   margin-right: auto;
   margin-left: auto;
   padding-top: 1em;
@@ -37,4 +37,12 @@ body {
       $colour: variables.$colour--black
     )
   }
+}
+
+.button {
+  @include mixins.button;
+}
+
+.button.secondary {
+  @include mixins.button($secondary: true);
 }

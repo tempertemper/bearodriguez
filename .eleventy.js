@@ -1,24 +1,38 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const sass = require("sass");
+const esbuild = require("esbuild");
 
 module.exports = function(eleventyConfig) {
 
   // Watch external folder for changes
   eleventyConfig.addWatchTarget("src/css");
+  eleventyConfig.addWatchTarget("src/js");
 
   // Compile src/css/style.scss manually after Eleventy builds
-  eleventyConfig.on("afterBuild", () => {
+  eleventyConfig.on("afterBuild", async () => {
+    // CSS
     const outDir = "dist/assets/css";
     fs.mkdirSync(outDir, { recursive: true });
-
     const result = sass.compile("src/css/style.scss", {
       loadPaths: ["src/css"],
       style: "compressed"
     });
-
     fs.writeFileSync(path.join(outDir, "style.css"), result.css);
     console.log("✓ Sass compiled: src/css/style.scss → dist/assets/css/style.css");
+
+    // JavaScript
+    const jsOutDir = "dist/assets/js";
+    fs.mkdirSync(jsOutDir, { recursive: true });
+    await esbuild.build({
+      entryPoints: ["src/js/index.js"],
+      bundle: true,
+      minify: true,
+      sourcemap: true,
+      outfile: path.join(jsOutDir, "scripts.js"),
+      logLevel: "silent"
+    });
+    console.log("✓ JS bundled: src/js/*.js → dist/assets/js/scripts.js");
   });
 
   // Order items if they have the 'order' front matter key
@@ -44,7 +58,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "assets/fonts" });
 
-  eleventyConfig.setServerOptions({ port: 3000 });
+  eleventyConfig.setServerOptions({
+    port: 3000,
+    files: [
+      "dist/assets/css/style.css",
+      "dist/assets/js/scripts.js"
+    ]
+  });
 
   return {
     dir: {

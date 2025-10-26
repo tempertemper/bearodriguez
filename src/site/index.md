@@ -13,7 +13,7 @@ Starting therapy can feel like a big step; you don't have to do it alone. My aim
 
 I adapt therapy to your individual needs. Together, we'll explore how your past experiences can shape your thoughts, emotions, and relationships today. This understanding can help you feel more self-assured, connected, and able to create meaningful change in your life.
 
-[About Bea](/about)
+<a href="/about" class="secondary" data-button>About Bea</a>
 
 </div>
 
@@ -24,7 +24,7 @@ I adapt therapy to your individual needs. Together, we'll explore how your past 
 {%- set max = 3 -%}
 {% include "nav.html" %}
 
-[View all specialisms](/expertise/)
+<a href="/expertise/" class="secondary" data-button>View all specialisms</a>
 
 <div class="highlight">
 
@@ -38,15 +38,13 @@ Each session moves at your pace, and everything you share is treated with comple
 - Flexible appointment dates and times
 - Professional and confidential service
 
-[What to expect](/starting-therapy)
+<a href="/starting-therapy" class="secondary" data-button>What to expect</a>
 
 </div>
 
 
 ## Ready to begin?
 
-Therapy can bring clarity, balance, and emotional strength, and you don't have to take the first step alone.
+I offer a free 15 minute online initial consultation so we can talk about what you're looking for and see if therapy together feels right for you.
 
-I offer a free initial consultation so we can talk about what you're looking for and see if therapy together feels right for you.
-
-[Book your first session](/contact)
+<a href="/contact" data-button>Book now</a>
