@@ -8,4 +8,9 @@ footer {
   @include mixins.dark-mode() {
     @include mixins.highlight(variables.$colour--black)
   }
+
+  ul,
+  ol {
+    @include mixins.remove-list-styling;
+  }
 }

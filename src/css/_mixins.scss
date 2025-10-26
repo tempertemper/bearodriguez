@@ -102,3 +102,16 @@
     top: 2px;
   }
 }
+
+@mixin remove-list-styling {
+
+  & {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li::before {
+    content: "\200B";
+    position: absolute;
+  }
+}
