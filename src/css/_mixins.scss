@@ -44,6 +44,11 @@
     margin-top: 2em;
   }
 
+  ul,
+  ol {
+    position: relative;
+  }
+
   &:before,
   &:after {
     content: '';
