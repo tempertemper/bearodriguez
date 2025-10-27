@@ -25,17 +25,11 @@ body {
 .highlight {
 
   &:nth-of-type(odd) {
-    @include mixins.highlight(
-      $background: variables.$colour--teal,
-      $colour: variables.$colour--white
-    )
+    @include mixins.highlight(teal)
   }
 
   &:nth-of-type(even) {
-    @include mixins.highlight(
-      $background: variables.$colour--yellow,
-      $colour: variables.$colour--black
-    )
+    @include mixins.highlight(yellow)
   }
 }
 

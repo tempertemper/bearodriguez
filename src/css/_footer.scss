@@ -3,10 +3,10 @@
 
 footer {
   padding-top: variables.$section-spacing;
-  @include mixins.highlight(variables.$colour--grey-dark);
+  @include mixins.highlight(grey);
 
   @include mixins.dark-mode() {
-    @include mixins.highlight(variables.$colour--black)
+    @include mixins.highlight(black)
   }
 
   ul,

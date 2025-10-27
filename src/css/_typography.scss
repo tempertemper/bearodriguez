@@ -6,6 +6,11 @@ body {
   font-family: "Nunito", sans-serif;
   line-height: 1.5;
   font-size: 125%;
+  font-weight: 400;
+
+  @include mixins.dark-mode() {
+    font-weight: 300;
+  };
 
   @media (min-width: 30em) {
     font-size: 150%;
@@ -22,6 +27,10 @@ h6 {
   line-height: 1.1;
   margin-top: 1.5em;
   font-weight: 500;
+
+  // @include mixins.dark-mode() {
+  //   font-weight: 400;
+  // };
 }
 
 h1 {

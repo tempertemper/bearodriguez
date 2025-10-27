@@ -39,13 +39,11 @@ nav.primary {
   }
 }
 
-.intro {
+hgroup {
   background-color: variables.$colour--yellow;
   color: variables.$colour--black;
   padding: 1em;
   border-radius: 1em;
-}
-
-hgroup {
   margin-bottom: 2em;
+  font-weight: 400;
 }

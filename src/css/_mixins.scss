@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'sass:map';
 @use 'sass:color';
 
 @mixin dark-mode($background: null, $colour: null) {
@@ -24,33 +25,62 @@
   }
 }
 
-@mixin highlight($background: null, $colour: null) {
-  $_background: if($background != null, $background, variables.$colour--teal);
-  $_foreground: if($colour != null, $colour, variables.$colour--white);
+$highlight-themes: (
+  teal:   (bg: variables.$colour--teal,      fg: variables.$colour--white),
+  yellow: (bg: variables.$colour--yellow,    fg: variables.$colour--black),
+  grey:   (bg: variables.$colour--grey-dark, fg: variables.$colour--white),
+  black:  (bg: variables.$colour--black,     fg: variables.$colour--white)
+);
+
+@mixin highlight($theme: teal) {
+  @if not map.has-key($highlight-themes, $theme) {
+    @error 'Unknown highlight theme. Use: teal, yellow, grey, black.';
+  }
+
+  $conf: map.get($highlight-themes, $theme);
+  $_background: map.get($conf, bg);
+  $_foreground: map.get($conf, fg);
+
+  $heading-weight:  if($theme == yellow, 600, 500);
+  $text-weight:     if($theme == yellow, 400, 300);
+  $border-width:    if($theme == yellow, 3px, 2px);
+  $outline-offset:  if($theme == yellow, 2px, 3px);
 
   background-color: $_background;
   color: $_foreground;
+  font-weight: $text-weight;
   position: relative;
   display: flow-root;
   padding-bottom: variables.$section-spacing;
   margin-top: 3em;
 
-  hgroup + & {
-    margin-top: 0;
-  }
+  .button.secondary {
+    border-width: $border-width;
 
-  h2,
-  & + h2 {
-    margin-top: 2em;
+    &:focus-visible {
+      outline-width: $border-width;
+      outline-offset: $outline-offset;
+    }
   }
 
   ul,
-  ol {
+  ol,
+  .button,
+  button {
     position: relative;
   }
 
-  &:before,
-  &:after {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $heading-weight;
+  }
+
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     background-color: $_background;
@@ -59,8 +89,14 @@
     width: 9999px;
   }
 
-  &:before { right: 100% }
-  &:after  { left: 100% }
+  &::before {
+    right: 100%;
+  }
+
+  &::after  {
+    left: 100%;
+  }
+
 }
 
 @mixin button($background: null, $colour: null, $secondary: null) {
@@ -70,13 +106,25 @@
   @if $secondary == true {
     background-color: transparent;
     color: inherit;
-    border: 2px solid currentColor;
     padding: calc(.25em - 2px) calc(1.5em - 2px);
-    font-weight: 500;
+    font-weight: inherit;
+    border: 3px solid currentColor;
+    @include dark-mode() {
+      border-width: 2px;
+    }
 
     &:hover {
       background-color: rgba(0, 0 , 0, 0.05);
-      border: 2px solid color-mix(in srgb, currentColor 90%, transparent);
+      border-color: color-mix(in srgb, currentColor 90%, transparent);
+    }
+
+    &:focus-visible {
+      outline: 3px solid currentcolor;
+      outline-offset: 2px;
+      @include dark-mode() {
+        outline-width: 2px;
+        outline-offset: 3px;
+      }
     }
   } @else {
     background-color: $_background;
@@ -87,6 +135,15 @@
 
     &:hover {
       background-color: color.scale($_background, $lightness: -10%);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $_background;
+      outline-offset: 2px;
+      @include dark-mode() {
+        outline-width: 2px;
+        outline-offset: 3px;
+      }
     }
   }
 
