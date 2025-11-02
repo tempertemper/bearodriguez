@@ -2,6 +2,7 @@
 title: Low self-esteem
 description: Therapy to build self-acceptance, confidence, and a more compassionate view of yourself.
 intro: Low self-esteem can affect how you see yourself and how you relate to others. You might feel not good enough, worry about what people think, or find it hard to trust your own judgement. Over time, this can lead to self-criticism, anxiety, or withdrawing from relationships and opportunities.
+illustration: path.svg
 permalink: expertise/low-self-esteem.html
 order: 3
 ---

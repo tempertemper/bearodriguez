@@ -54,6 +54,16 @@ module.exports = function(eleventyConfig) {
       });
   });
 
+  // Set colour for SVGs
+  eleventyConfig.addFilter("colourFor", function (order) {
+    const colours = ["#db592b", "#dbad21", "#5c7a77"];
+    const n = (order || 1) - 1;
+    const row = Math.floor(n / 3);
+    const col = n % 3;
+    return colours[(col + (row % 3)) % 3];
+  });
+
+
   // Passthroughs
   eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "assets/fonts" });

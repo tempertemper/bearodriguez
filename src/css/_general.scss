@@ -12,6 +12,8 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding-top: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   background: variables.$colour--white;
   color: variables.$colour--grey-dark;
   @include mixins.dark-mode(variables.$colour--grey-dark, variables.$colour--white);
@@ -24,17 +26,13 @@ body {
 
 .highlight {
 
-  &:nth-of-type(odd) {
+  &.odd {
     @include mixins.highlight(teal)
   }
 
-  &:nth-of-type(even) {
+  &.even {
     @include mixins.highlight(yellow)
   }
-}
-
-.button {
-  @include mixins.button;
 }
 
 .button.secondary {

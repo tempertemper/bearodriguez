@@ -2,6 +2,7 @@
 title: Relationship difficulties
 description: Counselling to improve communication, understand patterns, and build more balanced, fulfilling relationships.
 intro: Whether you're struggling with a partner, family member, friend, or colleague, therapy can help you find new ways of relating that feel more balanced and authentic.
+illustration: timer.svg
 permalink: expertise/relationship-difficulties.html
 order: 4
 ---

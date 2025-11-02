@@ -1,5 +1,5 @@
 @use 'variables';
-@use "mixins";
+@use 'mixins';
 
 header {
   display: flex;
@@ -8,18 +8,19 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 2em;
 }
 
 .logo {
 
   svg {
+    display: block;
     color: variables.$colour--grey-dark;
     @include mixins.dark-mode($colour: variables.$colour--white);
   }
 }
 
 nav.primary {
-  margin-bottom: 2em;
   font-weight: 500;
 
   :link {
@@ -32,10 +33,15 @@ nav.primary {
     gap: 1em;
     flex-wrap: wrap;
     margin: 0;
+    align-items: baseline;
   }
 
   li {
     display: inline-block;
+  }
+
+  .button {
+    @include mixins.button;
   }
 }
 

@@ -2,6 +2,7 @@
 title: Grief
 description: Space to process loss at your own pace and begin rebuilding a sense of stability, meaning, and peace.
 intro: Grief is a natural reaction to loss that can take many forms, such as the death of someone close, the end of a relationship, a change in health, or another major life shift. Grief can feel overwhelming, unpredictable, and deeply personal. There's no right or wrong way to grieve, and no fixed timeline for how long it lasts.
+illustration: arch.svg
 permalink: expertise/grief.html
 order: 6
 ---

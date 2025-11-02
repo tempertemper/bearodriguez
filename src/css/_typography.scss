@@ -41,7 +41,8 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 
-  + p {
+  + p,
+  + a {
     margin-top: 1em;
   }
 }

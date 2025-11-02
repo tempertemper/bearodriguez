@@ -1,0 +1,55 @@
+@use 'variables';
+
+.expertise {
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+  }
+
+  ul + a {
+    margin-top: 1em;
+  }
+
+  svg {
+    display: block;
+  }
+
+  @media (max-width: variables.$s) {
+
+    svg {
+      width: 4em;
+    }
+  }
+
+  @media (min-width: variables.$s) {
+    text-align: center;
+
+    ul {
+      display: grid;
+      column-gap: 1em;
+      row-gap: 2em;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    li {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: variables.$m) {
+
+    ul {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    li {
+
+      &:last-child:nth-child(3n + 1) {
+        grid-column: 2;
+      }
+    }
+  }
+}

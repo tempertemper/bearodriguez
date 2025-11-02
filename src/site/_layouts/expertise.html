@@ -1,0 +1,18 @@
+---
+layout: default.html
+---
+
+{{ content | safe }}
+
+<div class="expertise">
+    <h2>
+        {%- if page.url !== '/expertise/' -%}
+            Other areas I work with
+        {%- else %}
+            Areas I work with
+        {%- endif %}
+    </h2>
+    {%- set nav = collections.expertise %}
+    {%- set label = "Expertise" %}
+    {% include "nav.html" %}
+</div>

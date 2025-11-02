@@ -50,7 +50,6 @@ $highlight-themes: (
   color: $_foreground;
   font-weight: $text-weight;
   position: relative;
-  display: flow-root;
   padding-bottom: variables.$section-spacing;
   margin-top: 3em;
 
@@ -102,6 +101,7 @@ $highlight-themes: (
 @mixin button($background: null, $colour: null, $secondary: null) {
   $_background: if($background != null, $background, variables.$colour--red);
   $_foreground: if($colour != null, $colour, variables.$colour--white);
+  display: inline-block;
 
   @if $secondary == true {
     background-color: transparent;

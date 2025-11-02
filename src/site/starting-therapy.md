@@ -2,6 +2,7 @@
 title: What to expect
 description: Find out what starting therapy is like, from the first session to how regular counselling can help you grow and feel supported.
 intro: When you begin therapy with me, you'll have a space where you can talk openly and be met with warmth, curiosity, and no judgment. Whether you're feeling anxious or low, finding relationships difficult, or noticing unhelpful patterns that keep repeating, we'll work together to make sense of what's going on.
+illustration: float.svg
 layout: default
 permalink: starting-therapy.html
 ---

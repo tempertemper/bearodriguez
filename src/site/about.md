@@ -2,6 +2,7 @@
 title: About Bea
 description: Learn about Bea's counselling approach and experience, creating a warm, accepting space for personal growth and understanding.
 intro: I love being a counsellor. I'm passionate about supporting people to overcome what's holding them back and to reconnect with who they truly are.
+illustration: stack.svg
 layout: default
 permalink: about.html
 ---

@@ -2,6 +2,7 @@
 title: Depression
 description: Counselling to explore the roots of low mood and rediscover balance, motivation, and a renewed sense of self.
 intro: Depression can feel isolating, but you don't have to face it alone. Therapy offers steady support as you begin to rediscover balance, connection, and a renewed sense of self.
+illustration: pause.svg
 permalink: expertise/depression.html
 order: 2
 ---

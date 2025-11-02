@@ -1,0 +1,15 @@
+@use 'variables';
+
+.container {
+  display: grid;
+  gap: 1em;
+
+  @media (min-width: variables.$m) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .illustration {
+      justify-self: center;
+      align-self: center;
+    }
+  }
+}
