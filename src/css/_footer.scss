@@ -3,6 +3,7 @@
 
 footer {
   padding-top: variables.$section-spacing;
+  position: relative;
   @include mixins.highlight(grey);
 
   @include mixins.dark-mode() {
@@ -16,5 +17,13 @@ footer {
   ul,
   ol {
     @include mixins.remove-list-styling;
+  }
+
+  .logo-icon {
+    position: absolute;
+    bottom: -7em;
+    bottom: 0;
+    right: -8em;
+    z-index: 1;
   }
 }

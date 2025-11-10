@@ -6,10 +6,14 @@
 .heading-area:not(.home .heading-area) {
   background-color: variables.$colour--yellow;
   color: variables.$colour--black;
-  padding: 2em 2em 3em;
   border-radius: 1em;
   margin-bottom: 2em;
   font-weight: 400;
+  padding: 2em 1em 3em;
+
+  @media (min-width: variables.$m) {
+    padding-bottom: 3em;
+  }
 }
 
 .heading-area {

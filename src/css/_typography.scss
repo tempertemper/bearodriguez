@@ -40,7 +40,17 @@ h6 {
 
 h1 {
   margin-top: 0;
+  @include mixins.heading-xl;
 }
+
+h2 {
+  @include mixins.heading-l;
+}
+
+h3 {
+  @include mixins.heading-m;
+}
+
 
 p {
   margin-top: 0;

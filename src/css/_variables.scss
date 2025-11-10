@@ -1,10 +1,18 @@
+//
+// Layout
+//
+
 // Breakpoints
 $xs: 25em;
 $s: 31em;
 $m: 43em;
 $l: 60em;
-$xl: 70em;
+$xl: 75em;
 
+
+//
+// Colours
+//
 
 // Colours
 $colour--white: #eae6de;
@@ -26,5 +34,31 @@ $colour--yellow-grey: #ab871a;
 $colour--red-grey: #9d3d1b;
 
 
+//
+// Typography
+//
+
+// Major second
+$major-second-1: 1.125em;
+$major-second-2: 1.266em;
+$major-second-3: 1.424em;
+$major-second-4: 1.602em;
+
+// Major third
+$major-third-1: 1.25em;
+$major-third-2: 1.563em;
+$major-third-3: 1.953em;
+$major-third-4: 2.441em;
+
+// Perfect fourth
+$perfect-fourth-1: 1.333em;
+$perfect-fourth-2: 1.777em;
+$perfect-fourth-3: 2.269em;
+$perfect-fourth-4: 3.157em;
+
+
+//
 // Other
+//
+
 $section-spacing: 3em;
