@@ -179,10 +179,16 @@ $highlight-themes: (
 
   @media (min-width: variables.$m) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: dense;
 
     svg {
       justify-self: center;
       align-self: center;
+    }
+
+    &.even {
+      .content { grid-column: 2; }
+      svg { grid-column: 1; }
     }
   }
 }
@@ -226,12 +232,3 @@ $highlight-themes: (
     font-size: variables.$perfect-fourth-1;
   }
 }
-
-// @mixin heading-s {
-  // font-size: 1em;
-  // line-height: 1.4;
-//
-  // @media (min-width: variables.$m) {
-  //   font-size: 1em;
-  // }
-// }
