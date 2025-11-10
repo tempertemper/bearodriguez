@@ -6,26 +6,14 @@
 .heading-area:not(.home .heading-area) {
   background-color: variables.$colour--yellow;
   color: variables.$colour--black;
-  padding: 2em 1em;
+  padding: 2em;
   border-radius: 1em;
   margin-bottom: 2em;
   font-weight: 400;
 }
 
-.heading-area:not(.home .heading-area) {
-
-  hgroup {
-    padding-top: 1em;
-  }
-}
-
 .heading-area {
   @include mixins.two-columns;
-
-  svg {
-    width: 70%;
-    align-self: start;
-  }
 
   .home & {
 
@@ -50,29 +38,17 @@
   }
 
   .stack {
-    [id="middle"] { fill: variables.$colour--teal; }
-    [id="middle-top"] { fill: variables.$colour--red-teal; }
-    [id="middle-bottom"] { fill: variables.$colour--teal-grey; }
+    [fill="#dbad21"] { fill: variables.$colour--teal; }
+    [fill="#b54a24"] { fill: variables.$colour--red-teal; }
+    [fill="#ab871a"] { fill: variables.$colour--teal-grey; }
   }
 
+  .bust {
+    [fill="#dbad21"] { fill: variables.$colour--teal; }
+    [fill="#b54a24"] { fill: variables.$colour--red-teal; }
+  }
 
   .icon {
-
-    // $red-dark: color.adjust(
-    //   variables.$colour--red,
-    //   $lightness: -25%
-    // );
-    // [fill="#db592b"] {
-    //   fill: color.adjust($red-dark, $alpha: -0.4);
-    // }
-//
-    // $teal-dark: color.adjust(
-    //   variables.$colour--teal,
-    //   $lightness: -15%
-    // );
-    // [fill="#5c7a77"] {
-    //   fill: color.adjust($teal-dark, $alpha: -0.3);
-    // }
 
     $teal-yellow: color.adjust(
       variables.$colour--yellow,
@@ -89,4 +65,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.heading-area:not(.home .heading-area) {
+
+  @media (min-width: variables.$l) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    > :nth-child(1) { grid-column: 2 / span 5; }
+    > :nth-child(2) { grid-column: 7 / span 5; }
+  }
+
+  hgroup {
+    padding-top: 1em;
+  }
+
+  svg {
+    align-self: start;
+    width: 70%;
+  }
 }
