@@ -1,15 +1,6 @@
 @use 'variables';
+@use 'mixins';
 
 .container {
-  display: grid;
-  gap: 1em;
-
-  @media (min-width: variables.$m) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    .illustration {
-      justify-self: center;
-      align-self: center;
-    }
-  }
+  @include mixins.two-columns;
 }

@@ -19,6 +19,10 @@ body {
   @include mixins.dark-mode(variables.$colour--grey-dark, variables.$colour--white);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :link,
 :visited {
   color: inherit;

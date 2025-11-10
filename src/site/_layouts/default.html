@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
     {% include "head.html" %}
-    <body>
+    <body {%- if homepage %} class="home"{% endif %}>
         {% include "header.html" %}
-        <hgroup aria-label="Heading">
-            <h1>{{ title }}</h1>
-            <p>{{ intro }}</p>
-        </hgroup>
-        {%- if illustration %}
-            {% set colour = order | colourFor %}
-            {%- include "svg/" + illustration %}
-        {%- endif %}
+        {% include "heading-area.html" %}
         {{ content | safe }}
         {% include "footer.html" %}
         <style>

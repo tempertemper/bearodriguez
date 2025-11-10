@@ -1,0 +1,92 @@
+@use 'variables';
+@use 'mixins';
+@use 'sass:color';
+
+.home hgroup,
+.heading-area:not(.home .heading-area) {
+  background-color: variables.$colour--yellow;
+  color: variables.$colour--black;
+  padding: 2em 1em;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  font-weight: 400;
+}
+
+.heading-area:not(.home .heading-area) {
+
+  hgroup {
+    padding-top: 1em;
+  }
+}
+
+.heading-area {
+  @include mixins.two-columns;
+
+  svg {
+    width: 70%;
+    align-self: start;
+  }
+
+  .home & {
+
+    @media (min-width: variables.$m) {
+      grid-auto-flow: dense; // backfill gaps
+
+      hgroup {
+        grid-column: 2;
+      }
+
+      picture {
+        grid-column: 1;
+      }
+    }
+  }
+
+  img {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 1em;
+    display: block;
+  }
+
+  .stack {
+    [id="middle"] { fill: variables.$colour--teal; }
+    [id="middle-top"] { fill: variables.$colour--red-teal; }
+    [id="middle-bottom"] { fill: variables.$colour--teal-grey; }
+  }
+
+
+  .icon {
+
+    // $red-dark: color.adjust(
+    //   variables.$colour--red,
+    //   $lightness: -25%
+    // );
+    // [fill="#db592b"] {
+    //   fill: color.adjust($red-dark, $alpha: -0.4);
+    // }
+//
+    // $teal-dark: color.adjust(
+    //   variables.$colour--teal,
+    //   $lightness: -15%
+    // );
+    // [fill="#5c7a77"] {
+    //   fill: color.adjust($teal-dark, $alpha: -0.3);
+    // }
+
+    $teal-yellow: color.adjust(
+      variables.$colour--yellow,
+      $lightness: -20%
+    );
+    [fill="#dbad21"] {
+      fill: $teal-yellow;
+    }
+  }
+}
+
+.home hgroup {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

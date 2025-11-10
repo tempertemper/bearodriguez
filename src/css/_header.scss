@@ -44,12 +44,3 @@ nav.primary {
     @include mixins.button;
   }
 }
-
-hgroup {
-  background-color: variables.$colour--yellow;
-  color: variables.$colour--black;
-  padding: 1em;
-  border-radius: 1em;
-  margin-bottom: 2em;
-  font-weight: 400;
-}
