@@ -21,9 +21,17 @@ footer {
 
   .logo-icon {
     position: absolute;
-    bottom: -7em;
     bottom: 0;
     right: -8em;
     z-index: 1;
+
+    @media (max-width: variables.$m) {
+      right: -4em;
+      width: 65%;
+    }
+
+    @media (max-width: variables.$s) {
+      display: none;
+    }
   }
 }
