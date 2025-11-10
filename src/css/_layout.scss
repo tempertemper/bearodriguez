@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'mixins';
+
+.container {
+  @include mixins.two-columns;
+}

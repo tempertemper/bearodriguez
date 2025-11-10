@@ -1,0 +1,46 @@
+@use 'variables';
+@use 'mixins';
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2em;
+}
+
+.logo {
+
+  svg {
+    display: block;
+    color: variables.$colour--grey-dark;
+    @include mixins.dark-mode($colour: variables.$colour--white);
+  }
+}
+
+nav.primary {
+  font-weight: 500;
+
+  :link {
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: baseline;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .button {
+    @include mixins.button;
+  }
+}

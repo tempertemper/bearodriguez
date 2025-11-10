@@ -1,11 +1,11 @@
 ---
 title: Major life changes
 description: Support through big life transitions, helping you find clarity, confidence, and direction as things shift.
+intro: Periods of change can bring uncertainty, loss, or a sense of being unmoored. Whether you're adjusting to a new stage of life or recovering from an unexpected event, therapy offers a space to explore what these shifts mean for you.
+illustration: stairs.svg
 permalink: expertise/major-life-changes.html
 order: 7
 ---
-
-Periods of change can bring uncertainty, loss, or a sense of being unmoored. Whether you're adjusting to a new stage of life or recovering from an unexpected event, therapy offers a space to explore what these shifts mean for you.
 
 Major life changes might include:
 

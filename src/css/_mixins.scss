@@ -1,0 +1,234 @@
+@use 'variables';
+@use 'sass:map';
+@use 'sass:color';
+
+@mixin dark-mode($background: null, $colour: null) {
+
+  @media screen and (prefers-color-scheme: dark), screen and (prefers-contrast: more) {
+
+    @if ($background != null and $colour != null) {
+      background-color: $background;
+      color: $colour;
+      @content;
+    }
+    @else if ($background != null and $colour == null) {
+      background-color: $background;
+      @content;
+    }
+    @else if ($colour != null and $background == null) {
+      color: $colour;
+      @content;
+    }
+    @else {
+      @content;
+    }
+  }
+}
+
+$highlight-themes: (
+  teal:   (bg: variables.$colour--teal,      fg: variables.$colour--white),
+  yellow: (bg: variables.$colour--yellow,    fg: variables.$colour--black),
+  grey:   (bg: variables.$colour--grey-dark, fg: variables.$colour--white),
+  black:  (bg: variables.$colour--black,     fg: variables.$colour--white)
+);
+
+@mixin highlight($theme: teal) {
+  @if not map.has-key($highlight-themes, $theme) {
+    @error 'Unknown highlight theme. Use: teal, yellow, grey, black.';
+  }
+
+  $conf: map.get($highlight-themes, $theme);
+  $_background: map.get($conf, bg);
+  $_foreground: map.get($conf, fg);
+
+  $heading-weight:  if($theme == yellow, 600, 500);
+  $text-weight:     if($theme == yellow, 400, 300);
+  $border-width:    if($theme == yellow, 3px, 2px);
+  $outline-offset:  if($theme == yellow, 2px, 3px);
+
+  background-color: $_background;
+  color: $_foreground;
+  font-weight: $text-weight;
+  position: relative;
+  padding-bottom: variables.$section-spacing;
+  margin-top: 3em;
+
+  .button.secondary {
+    border-width: $border-width;
+
+    &:focus-visible {
+      outline-width: $border-width;
+      outline-offset: $outline-offset;
+    }
+  }
+
+  ul,
+  ol,
+  .button,
+  button {
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $heading-weight;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $_background;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after  {
+    left: 100%;
+  }
+
+}
+
+@mixin button($background: null, $colour: null, $secondary: null) {
+  $_background: if($background != null, $background, variables.$colour--red);
+  $_foreground: if($colour != null, $colour, variables.$colour--white);
+  display: inline-block;
+
+  @if $secondary == true {
+    background-color: transparent;
+    color: inherit;
+    padding: calc(.25em - 2px) calc(1.5em - 2px);
+    font-weight: inherit;
+    border: 3px solid currentColor;
+    @include dark-mode() {
+      border-width: 2px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0 , 0, 0.05);
+      border-color: color-mix(in srgb, currentColor 90%, transparent);
+    }
+
+    &:focus-visible {
+      outline: 3px solid currentcolor;
+      outline-offset: 2px;
+      @include dark-mode() {
+        outline-width: 2px;
+        outline-offset: 3px;
+      }
+    }
+  } @else {
+    background-color: $_background;
+    color: $_foreground;
+    border: none;
+    padding: .25em 1.5em;
+    font-weight: 700;
+
+    &:hover {
+      background-color: color.scale($_background, $lightness: -10%);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $_background;
+      outline-offset: 2px;
+      @include dark-mode() {
+        outline-width: 2px;
+        outline-offset: 3px;
+      }
+    }
+  }
+
+  border-radius: .5em;
+  text-decoration: none;
+
+  &:hover {
+    color: color-mix(in srgb, currentColor 90%, transparent);
+  }
+
+  &:active {
+    position: relative;
+    top: 2px;
+  }
+}
+
+@mixin remove-list-styling {
+
+  & {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li::before {
+    content: "\200B";
+    position: absolute;
+  }
+}
+
+@mixin two-columns {
+  display: grid;
+  gap: 1em;
+
+  @media (min-width: variables.$m) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: dense;
+
+    svg {
+      justify-self: center;
+      align-self: center;
+    }
+
+    &.even {
+      .content { grid-column: 2; }
+      svg { grid-column: 1; }
+    }
+  }
+}
+
+
+@mixin heading-xl {
+  font-size: variables.$major-second-3;
+  hyphens: auto;
+
+  @media (min-width: variables.$l) {
+    font-size: variables.$major-third-3;
+    hyphens: manual;
+  }
+
+  @media (min-width: variables.$xl) {
+    font-size: variables.$perfect-fourth-3;
+  }
+}
+
+@mixin heading-l {
+  font-size: variables.$major-second-2;
+
+  @media (min-width: variables.$l) {
+    font-size: variables.$major-third-2;
+  }
+
+  @media (min-width: variables.$xl) {
+    font-size: variables.$perfect-fourth-2;
+  }
+}
+
+@mixin heading-m {
+  font-size: variables.$major-second-1;
+  font-size: 1em;
+
+  @media (min-width: variables.$l) {
+    font-size: variables.$major-third-1;
+  }
+
+  @media (min-width: variables.$xl) {
+    font-size: variables.$perfect-fourth-1;
+  }
+}

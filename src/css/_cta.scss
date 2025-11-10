@@ -1,0 +1,14 @@
+@use 'mixins';
+@use 'variables';
+
+.cta {
+
+  .button {
+    @include mixins.button;
+  }
+
+  svg {
+    padding-top: 3em;
+  }
+}
+

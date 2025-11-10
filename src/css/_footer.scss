@@ -1,0 +1,37 @@
+@use 'mixins';
+@use 'variables';
+
+footer {
+  padding-top: variables.$section-spacing;
+  position: relative;
+  @include mixins.highlight(grey);
+
+  @include mixins.dark-mode() {
+    @include mixins.highlight(black)
+  }
+
+  .highlight + & {
+    margin-top: 0;
+  }
+
+  ul,
+  ol {
+    @include mixins.remove-list-styling;
+  }
+
+  .logo-icon {
+    position: absolute;
+    bottom: 0;
+    right: -8em;
+    z-index: 1;
+
+    @media (max-width: variables.$m) {
+      right: -4em;
+      width: 65%;
+    }
+
+    @media (max-width: variables.$s) {
+      display: none;
+    }
+  }
+}

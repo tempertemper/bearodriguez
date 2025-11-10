@@ -1,0 +1,21 @@
+<footer>
+    {%- set nav = [
+        { title: 'About', url: '/about' },
+        { title: 'Expertise', url: '/expertise/' },
+        { title: 'What to expect', url: '/starting-therapy' },
+        { title: 'Contact', url: '/contact' }
+    ] %}
+    {% set label = "Quick links" %}
+    {% include "nav.html" %}
+    <ul>
+        <li>Email <a href="mailto:{{ site.author.email }}">{{ site.author.email | replace('+website', '') }}</a></li>
+        <li>Telephone <a href="tel:{{ site.author.tel | replace('07', '00447') | replace(' ', '') }}">{{ site.author.tel }}</a></li>
+    </ul>
+    {% include "svg/logo.svg" %}
+    <p>&copy; 2025 Bea Rodriguez</p>
+    <ul>
+        <li><a href="/privacy-policy">Privacy policy</a></li>
+        <li><a href="/accessibility">Accessibility</a></li>
+    </ul>
+    {% include "svg/logo-icon--footer.svg" %}
+</footer>

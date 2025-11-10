@@ -1,0 +1,17 @@
+<div class="heading-area">
+    <hgroup aria-label="Heading">
+        <h1>{{ title }}</h1>
+        <p>{{ intro }}</p>
+    </hgroup>
+    {%- if homepage %}
+        <picture>
+            <source srcset="/assets/img/bea-rodriguez.avif" type="image/avif" />
+            <source srcset="/assets/img/bea-rodriguez.webp" type="image/webp" />
+            <img src="/assets/img/bea-rodriguez.jpg" alt="asdf" width="770" height="1024" loading="lazy" decoding="async" />
+        </picture>
+    {%- endif %}
+    {%- if illustration %}
+        {% set colour = order | colourFor %}
+        {%- include "svg/" + illustration %}
+    {%- endif %}
+</div>

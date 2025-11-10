@@ -1,0 +1,90 @@
+@use 'variables';
+@use 'mixins';
+@use 'sass:color';
+
+.home hgroup,
+.heading-area:not(.home .heading-area) {
+  background-color: variables.$colour--yellow;
+  color: variables.$colour--black;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  font-weight: 400;
+  padding: 2em 1em 3em;
+
+  @media (min-width: variables.$m) {
+    padding-bottom: 3em;
+  }
+}
+
+.heading-area {
+  @include mixins.two-columns;
+
+  .home & {
+
+    @media (min-width: variables.$m) {
+      grid-auto-flow: dense; // backfill gaps
+
+      hgroup {
+        grid-column: 2;
+      }
+
+      picture {
+        grid-column: 1;
+      }
+    }
+  }
+
+  img {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 1em;
+    display: block;
+  }
+
+  .stack {
+    [fill="#dbad21"] { fill: variables.$colour--teal; }
+    [fill="#b54a24"] { fill: variables.$colour--red-teal; }
+    [fill="#ab871a"] { fill: variables.$colour--teal-grey; }
+  }
+
+  .bust {
+    [fill="#dbad21"] { fill: variables.$colour--teal; }
+    [fill="#b54a24"] { fill: variables.$colour--red-teal; }
+  }
+
+  .icon {
+
+    $teal-yellow: color.adjust(
+      variables.$colour--yellow,
+      $lightness: -20%
+    );
+    [fill="#dbad21"] {
+      fill: $teal-yellow;
+    }
+  }
+}
+
+.home hgroup {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-area:not(.home .heading-area) {
+
+  @media (min-width: variables.$l) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    > :nth-child(1) { grid-column: 2 / span 5; }
+    > :nth-child(2) { grid-column: 7 / span 5; }
+  }
+
+  hgroup {
+    padding-top: 1em;
+  }
+
+  svg {
+    align-self: start;
+    width: 70%;
+  }
+}

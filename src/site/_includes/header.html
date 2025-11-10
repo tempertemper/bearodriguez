@@ -1,0 +1,14 @@
+<header>
+    <a href="/" class="logo">
+        {% include "svg/logo.svg" %}
+        <span class="visually-hidden">Bea Rodriguez logo, go to homepage</span>
+    </a>
+    {%- set nav = [
+        { title: 'About', url: '/about' },
+        { title: 'Expertise', url: '/expertise/' },
+        { title: 'What to expect', url: '/starting-therapy' },
+        { title: 'Contact', url: '/contact', button: true }
+    ] %}
+    {% set label = "Primary" %}
+    {% include "nav.html" %}
+</header>

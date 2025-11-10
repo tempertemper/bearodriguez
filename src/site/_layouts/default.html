@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
     {% include "head.html" %}
-    <body>
-        <header>
-            <a href="/">BeaRodriguez.com<span class="visually-hidden">, go to homepage</span></a>
-            {%- set nav = [
-                { title: 'Expertise', url: '/expertise/' },
-                { title: 'Starting therapy', url: '/starting-therapy' },
-                { title: 'About', url: '/about' },
-                { title: 'Contact', url: '/contact' }
-            ] %}
-            {% set label = "Primary" %}
-            {% include "nav.html" %}
-        </header>
-        <h1>{{ title }}</h1>
+    <body {%- if homepage %} class="home"{% endif %}>
+        {% include "header.html" %}
+        {% include "heading-area.html" %}
         {{ content | safe }}
+        {% include "footer.html" %}
         <style>
           @media screen and (prefers-color-scheme: dark) {
             :where(a:link) {color: #9e9eff;}
             :where(a:visited) {color: #d0adf0;}
           }
         </style>
+        <script src="/assets/js/scripts.js"></script>
     </body>
 </html>
