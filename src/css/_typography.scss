@@ -15,6 +15,11 @@ body {
   @media (min-width: 30em) {
     font-size: 150%;
   }
+
+  > p,
+  > li {
+    max-width: 30em;
+  }
 }
 
 h1,
@@ -45,15 +50,4 @@ p {
   + a {
     margin-top: 1em;
   }
-}
-
-
-
-blockquote {
-  border-left: solid .25em variables.$colour--grey-dark;
-  padding-left: .75em;
-  margin-left: -1em;
-  @include mixins.dark-mode() {
-    border-left-color: solid .25em variables.$colour--white;
-  };
 }
