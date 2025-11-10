@@ -5,7 +5,7 @@ intro: People come to therapy for many reasons, to ease anxiety or low mood, to 
 illustration: eight.svg
 layout: expertise
 permalink: expertise/index.html
-tags: []
+override:tags: []
 eleventyExcludeFromCollections: true
 ---
 

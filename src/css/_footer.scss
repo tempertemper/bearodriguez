@@ -9,6 +9,10 @@ footer {
     @include mixins.highlight(black)
   }
 
+  .highlight + & {
+    margin-top: 0;
+  }
+
   ul,
   ol {
     @include mixins.remove-list-styling;

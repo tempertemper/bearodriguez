@@ -39,3 +39,6 @@ The consistency of weekly sessions helps the work go deeper and gives you regula
 ## You Set the Pace
 
 There's no right or wrong way to start therapy. Wherever you're coming from, you'll be met with care, respect, and curiosity. The space is yours — to feel seen, heard, and supported as you begin to make meaningful change.
+
+{%- set highlight = true %}
+{%- include "cta.html" %}

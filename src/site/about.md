@@ -29,3 +29,6 @@ I have experience supporting clients with a wide range of issues, including anxi
 My work is rooted in Transactional Analysis, helping us understand patterns in thoughts, feelings, and relationships. I also draw on attachment theory and psychodynamic and person-centred approaches, exploring experiences deeply while keeping the therapeutic relationship at the heart of the work.
 
 Together, we'll look at the thoughts and emotions that may be holding you back, uncover new ways of responding, and reconnect with your inner resources. Therapy is a collaborative space for self-awareness, growth, and meaningful change, supported by understanding, reflection, and connection.
+
+{%- set highlight = true %}
+{%- include "cta.html" %}
