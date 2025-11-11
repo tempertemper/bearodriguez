@@ -48,18 +48,14 @@
   }
 
   .bust {
-    [fill="#dbad21"] { fill: variables.$colour--teal; }
-    [fill="#b54a24"] { fill: variables.$colour--red-teal; }
+    [fill="#dbad21"] { fill: variables.$colour--white; }
+    [fill="#b54a24"] { fill: variables.$colour--white-red; }
   }
 
   .icon {
 
-    $teal-yellow: color.adjust(
-      variables.$colour--yellow,
-      $lightness: -20%
-    );
     [fill="#dbad21"] {
-      fill: $teal-yellow;
+      fill: variables.$colour--white;
     }
   }
 }
