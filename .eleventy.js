@@ -67,6 +67,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "assets/fonts" });
   eleventyConfig.addPassthroughCopy({ "src/site/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "src/site/site.webmanifest": "site.webmanifest" });
 
   eleventyConfig.setServerOptions({
     port: 3000,
