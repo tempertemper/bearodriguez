@@ -1,14 +1,13 @@
 {
-  "title": "eleventy-base",
-  "company": "Example Limited",
+  "title": "bearodriguez",
+  "company": "Bea Rodriguez",
   "version": "0.0.1",
-  "url": "https://example.com",
+  "url": "https://www.bearodriguez.com",
   "baseurl": "",
-  "repo": "https://github.com/tempertemper/eleventy-base/issues",
+  "repo": "https://github.com/tempertemper/bearodriguez/issues",
   "comments": false,
   "author": {
-    "name": "Example name",
-    "twitter": "@example",
+    "name": "Bea Rodriguez",
     "email": "hello+website@bearodriguez.com",
     "tel": "07480 625258"
   },
