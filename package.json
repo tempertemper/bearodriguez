@@ -1,6 +1,6 @@
 {
   "name": "bearodriguez.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bea Rodriguez therapy",
   "scripts": {
     "clear": "rm -rf dist",
