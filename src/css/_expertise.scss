@@ -45,11 +45,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    li {
-
-      &:last-child:nth-child(3n + 1) {
-        grid-column: 2;
-      }
-    }
+    // li {
+//
+    //   &:last-child:nth-child(3n + 1) {
+    //     grid-column: 2;
+    //   }
+    // }
   }
 }

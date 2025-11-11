@@ -13,6 +13,14 @@ All notable changes to this project will be documented in this file. The format 
 
 ----------
 
+
+## [1.0.1] - 2025-11-11
+
+### Fixes
+- Tidies alignment of expertise icons
+- Removes redundant expertise content
+
+
 ## [1.0.0] - 2025-11-11
 
 - Gets website built to design specification
