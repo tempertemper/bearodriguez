@@ -10,13 +10,13 @@
             {% set colour = item.data.order | colourFor %}
             <li>
                 {%- if expertise %}
-                    <a href="{{ item.url | url }}" aria-hidden="true" tabindex="-1">
+                    <a href="{{ item.url | url | replace('.html', '') }}" aria-hidden="true" tabindex="-1">
                         {%- set illustration = item.data.illustration if item.data.illustration else item.illustration %}
                         {%- include "svg/" + illustration %}
                     </a>
                 {%- endif %}
                 <a
-                    href="{{ item.url | url }}"
+                    href="{{ item.url | url | replace('.html', '') }}"
                     {%- if primary and isCurrent %} aria-current="page"{% endif %}
                     {%- if item.button %} data-button{% endif %}>
                     {{- item.data.title or item.title }}
