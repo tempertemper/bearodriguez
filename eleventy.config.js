@@ -1,9 +1,9 @@
-const fs = require("node:fs");
-const path = require("node:path");
-const sass = require("sass");
-const esbuild = require("esbuild");
+import fs from "node:fs";
+import path from "node:path";
+import sass from "sass";
+import * as esbuild from "esbuild";
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
 
   // Watch external folder for changes
   eleventyConfig.addWatchTarget("src/css");
@@ -37,25 +37,25 @@ module.exports = function(eleventyConfig) {
 
   // Order items if they have the 'order' front matter key
   eleventyConfig.addFilter("ordered", (items, key = "order", desc = false) => {
-      if (!Array.isArray(items)) return [];
-      const getOrderValue = (item) => {
-          const orderValue = item?.data?.[key];
-          return orderValue === undefined ? Number.POSITIVE_INFINITY : orderValue;
-      };
-      return [...items].sort((a, b) => {
-          const aOrder = getOrderValue(a);
-          const bOrder = getOrderValue(b);
-            if (aOrder === bOrder) {
-              const aTitle = a?.data?.title || a.fileSlug || "";
-              const bTitle = b?.data?.title || b.fileSlug || "";
-              return aTitle.localeCompare(bTitle);
-          }
-          return desc ? bOrder - aOrder : aOrder - bOrder;
-      });
+    if (!Array.isArray(items)) return [];
+    const getOrderValue = (item) => {
+      const orderValue = item?.data?.[key];
+      return orderValue === undefined ? Number.POSITIVE_INFINITY : orderValue;
+    };
+    return [...items].sort((a, b) => {
+      const aOrder = getOrderValue(a);
+      const bOrder = getOrderValue(b);
+      if (aOrder === bOrder) {
+        const aTitle = a?.data?.title || a.fileSlug || "";
+        const bTitle = b?.data?.title || b.fileSlug || "";
+        return aTitle.localeCompare(bTitle);
+      }
+      return desc ? bOrder - aOrder : aOrder - bOrder;
+    });
   });
 
   // Set colour for SVGs
-  eleventyConfig.addFilter("colourFor", function (order) {
+  eleventyConfig.addFilter("colourFor", (order) => {
     const colours = ["#db592b", "#dbad21", "#5c7a77"];
     const n = (order || 1) - 1;
     const row = Math.floor(n / 3);
@@ -87,4 +87,4 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   };
-};
+}

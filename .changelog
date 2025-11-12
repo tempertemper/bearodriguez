@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [1.0.4] - 2025-11-12
+
+### Changes
+- Converts Eleventy config to ES module syntax
+
+
 ## [1.0.3] - 2025-11-12
 
 ### Fixes
