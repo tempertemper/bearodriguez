@@ -10,14 +10,19 @@ footer {
     @include mixins.highlight(black)
   }
 
-  .highlight + & {
+  main:has(> .highlight:last-child) + & {
     margin-top: 0;
   }
 
   ul,
   ol {
     @include mixins.remove-list-styling;
+
+    a {
+      @include mixins.link-height;
+    }
   }
+
 
   .logo-icon {
     position: absolute;
