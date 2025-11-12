@@ -47,3 +47,7 @@ html {
 .button.secondary {
   @include mixins.button($secondary: true);
 }
+
+.visually-hidden {
+  @include mixins.visually-hidden;
+}

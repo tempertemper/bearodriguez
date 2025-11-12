@@ -2,16 +2,13 @@
 <html xml:lang="en" lang="en">
     {% include "head.html" %}
     <body {%- if homepage %} class="home"{% endif %}>
+        <a href="#main" tabindex="0" class="skip-to-content">Skip to main content</a>
         {% include "header.html" %}
-        {% include "heading-area.html" %}
-        {{ content | safe }}
+        <main id="main" tabindex="-1">
+            {% include "heading-area.html" %}
+            {{ content | safe }}
+        </main>
         {% include "footer.html" %}
-        <style>
-          @media screen and (prefers-color-scheme: dark) {
-            :where(a:link) {color: #9e9eff;}
-            :where(a:visited) {color: #d0adf0;}
-          }
-        </style>
         <script src="/assets/js/scripts.js"></script>
     </body>
 </html>

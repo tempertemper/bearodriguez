@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'mixins';
+
+.skip-to-content {
+  @include mixins.visually-hidden;
+
+  &:focus {
+    top: .5em;
+    left: .5em;
+    overflow: visible;
+    clip: initial;
+    height: auto;
+    width: auto;
+    margin: 0;
+    background-color: variables.$colour--red;
+    box-shadow: 0 0 0 2px variables.$colour--white, 0 0 .4em 5px variables.$colour--black;
+    color: variables.$colour--white;
+    padding: 0.5em .5em;
+    font-weight: 700;
+    outline: 3px solid variables.$colour--red;
+    outline-offset: 2px;
+  }
+}
+
+main:focus {
+  outline: none;
+}

@@ -34,4 +34,14 @@ footer {
       display: none;
     }
   }
+
+  .credits {
+
+    @media (min-width: variables.$s) {
+      max-width: 50%
+    }
+    @media (min-width: variables.$m) {
+      max-width: 70%
+    }
+  }
 }
