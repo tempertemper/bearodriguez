@@ -15,12 +15,16 @@ body {
   @media (min-width: variables.$s) {
     font-size: 150%;
   }
+}
+
+main {
 
   > p,
   > li {
     max-width: 30em;
   }
 }
+
 
 h1,
 h2,
