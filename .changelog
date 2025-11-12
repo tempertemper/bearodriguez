@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file. The format 
 - Adds accessibility statement
 - Stops homepage image lazy loading
 - Adds some HTTP headers for more security
+- Adds design/build credits to footer
 
 ----------
 
