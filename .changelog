@@ -11,11 +11,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [1.0.3] - 2025-11-12
+
+### Fixes
 - Fixes body max-width
 - Fixes footer gap when last element on page above is a highlight panel
 - Fixes link height in footer
-
-----------
 
 
 ## [1.0.2] - 2025-11-12
