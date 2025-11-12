@@ -10,7 +10,7 @@ footer {
     @include mixins.highlight(black)
   }
 
-  .highlight + & {
+  main:has(> .highlight:last-child) + & {
     margin-top: 0;
   }
 

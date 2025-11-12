@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. The format 
 ## [Unreleased]
 
 - Fixes body max-width
+- Fixes footer gap when last element on page above is a highlight panel
 
 ----------
 
