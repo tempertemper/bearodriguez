@@ -69,3 +69,15 @@ p {
     padding-left: 1em;
   }
 }
+
+a {
+
+  &:focus-visible {
+    outline: 3px solid currentcolor;
+    outline-offset: 1px;
+    @include mixins.dark-mode() {
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+  }
+}

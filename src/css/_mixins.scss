@@ -55,6 +55,10 @@ $highlight-themes: (
 
   .button.secondary {
     border-width: $border-width;
+  }
+
+  a,
+  .button.secondary {
 
     &:focus-visible {
       outline-width: $border-width;
@@ -95,7 +99,6 @@ $highlight-themes: (
   &::after  {
     left: 100%;
   }
-
 }
 
 @mixin button($background: null, $colour: null, $secondary: null) {
@@ -231,4 +234,15 @@ $highlight-themes: (
   @media (min-width: variables.$xl) {
     font-size: variables.$perfect-fourth-1;
   }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
