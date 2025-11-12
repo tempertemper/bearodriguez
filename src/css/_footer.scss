@@ -17,7 +17,12 @@ footer {
   ul,
   ol {
     @include mixins.remove-list-styling;
+
+    a {
+      @include mixins.link-height;
+    }
   }
+
 
   .logo-icon {
     position: absolute;
