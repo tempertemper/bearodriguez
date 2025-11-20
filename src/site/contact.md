@@ -12,7 +12,6 @@ You can use this form to ask questions or request a free initial consultation. B
 <form
     name="contact"
     method="post"
-    action="/thank-you"
     data-netlify="true"
     netlify-honeypot="website"
 >
