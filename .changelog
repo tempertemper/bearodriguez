@@ -11,6 +11,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+- Adds 'message received' page
+- Introduces mechanism to prevent search indexing
+- Uses intro for page description if no explicit description front matter is set
+- Softens focus radius for links
+- Introduces text input and textarea styling
+- Adds contact form to contact page
+
 ----------
 
 

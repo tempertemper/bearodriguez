@@ -77,6 +77,7 @@ p {
 a {
 
   &:focus-visible {
+    border-radius: .25em;
     outline: 3px solid currentcolor;
     outline-offset: 1px;
     @include mixins.dark-mode() {

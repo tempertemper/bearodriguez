@@ -3,7 +3,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}" />
+    {%- if description %}
+        {%- set descriptionContent = description %}
+    {%- else %}
+        {%- set descriptionContent = intro %}
+    {%- endif %}
+    <meta name="description" content="{{ descriptionContent }}" />
     <meta name="color-scheme" content="dark light" />
 
     <meta name="theme-color" content="#dbad21">
@@ -23,7 +28,12 @@
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ site.url }}/assets/img/og-image.png">
 
-    <meta name="robots" content="index, follow">
+    {%- if noIndex %}
+        <meta name="robots" content="noindex, nofollow">
+    {%- else %}
+        <meta name="robots" content="index, follow">
+    {%- endif %}
+
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace('.html', '') }}">
 
     <link href="/assets/css/style.css?v={{ site.version }}" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
