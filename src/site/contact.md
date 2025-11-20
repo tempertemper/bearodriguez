@@ -7,13 +7,74 @@ layout: default
 permalink: contact.html
 ---
 
-<dl>
-    <dt>Email</dt>
-        <dd><a href="mailto:hello+website@bearodriguez.com">hello@bearodriguez.com</a></dd>
-    <dt>Telephone</dt>
-        <dd><a href="tel:{{ site.author.tel | replace('07', '00447') | replace(' ', '') }}">{{ site.author.tel }}</a></dd>
-    <dt>Location</dt>
-        <dd>In person in Jesmond, Newcastle upon Tyne</dd>
-        <dd>In person in Tynemouth</dd>
-        <dd>Online wherever you are</dd>
-</dl>
+You can use this form to ask questions or request a free initial consultation. Bea will get back to you as soon as she can.
+
+<form
+    name="contact"
+    method="post"
+    action="/thank-you"
+    data-netlify="true"
+    netlify-honeypot="website"
+>
+    {# Netlify form name #}
+    <input type="hidden" name="form-name" value="contact">
+
+    {# Honeypot field for spam bots #}
+    <p hidden>
+        <label for="website">Leave this field blank</label>
+        <input id="website" name="website" autocomplete="off">
+    </p>
+    <div>
+        <label for="name">Name</label>
+        <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+        >
+    </div>
+    <div>
+        <label for="email">Email address</label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+        >
+    </div>
+    <div>
+        <label for="phone">Telephone number <span>(optional)</span></label>
+        <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+        >
+    </div>
+    <div>
+        <label for="message">What would you like to talk about</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+        ></textarea>
+    </div>
+    {# <div>
+        <label for="hear-about">
+            How did you hear about Bea <span>(optional)</span>
+        </label>
+        <select id="hear-about" name="hear_about">
+            <option value="">Please choose an option</option>
+            <option value="search">Search engine</option>
+            <option value="psychology-today">Psychology Today</option>
+            <option value="counselling-directory">Counselling Directory</option>
+            <option value="social-media">Social media</option>
+            <option value="friend">From a friend or colleague</option>
+            <option value="other">Other</option>
+        </select>
+    </div> #}
+    <button type="submit">Send message</button>
+</form>

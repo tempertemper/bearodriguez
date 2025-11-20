@@ -1,0 +1,39 @@
+@use 'mixins';
+@use 'variables';
+
+form {
+  max-width: 30em;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    + div {
+      margin-top: 1em;
+    }
+  }
+}
+
+input,
+textarea {
+  border: 3px solid variables.$colour--red;
+  background-color: transparent;
+  border-radius: .25em;
+  padding: .5em 1em;
+  @include mixins.dark-mode() {
+    border-width: 2px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid variables.$colour--red;
+    outline-offset: 2px;
+    @include mixins.dark-mode() {
+      outline-width: 2px;
+      outline-offset: 3px;
+    }
+  }
+}
+
+[type="submit"] {
+  @include mixins.button;
+}
