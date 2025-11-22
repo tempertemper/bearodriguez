@@ -34,6 +34,12 @@ textarea {
   }
 }
 
+label {
+  font-weight: 700;
+}
+
 [type="submit"] {
+  margin-top: 1em;
   @include mixins.button;
+  padding: .5em 1em;
 }

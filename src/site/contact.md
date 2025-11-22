@@ -7,8 +7,6 @@ layout: default
 permalink: contact.html
 ---
 
-You can use this form to ask questions or request a free initial consultation. Bea will get back to you as soon as she can.
-
 <form
     name="contact"
     method="post"
@@ -31,6 +29,7 @@ You can use this form to ask questions or request a free initial consultation. B
             name="name"
             type="text"
             autocomplete="name"
+            maxlength="200"
             required
         >
     </div>
@@ -40,41 +39,33 @@ You can use this form to ask questions or request a free initial consultation. B
             id="email"
             name="email"
             type="email"
+            inputmode="email"
             autocomplete="email"
+            maxlength="200"
             required
         >
     </div>
     <div>
-        <label for="phone">Telephone number <span>(optional)</span></label>
+        <label for="phone">Phone number (optional)</label>
         <input
             id="phone"
             name="phone"
-            type="tel"
+            inputmode="tel"
+            maxlength="20"
             autocomplete="tel"
         >
     </div>
     <div>
-        <label for="message">What would you like to talk about</label>
+        <label for="message">What would you like to explore?</label>
+        <div id="messageHint">Maximum 1000 characters</div>
         <textarea
             id="message"
             name="message"
+            aria-describedby="messageHint"
             rows="6"
+            maxlength="1000"
             required
         ></textarea>
     </div>
-    {# <div>
-        <label for="hear-about">
-            How did you hear about Bea <span>(optional)</span>
-        </label>
-        <select id="hear-about" name="hear_about">
-            <option value="">Please choose an option</option>
-            <option value="search">Search engine</option>
-            <option value="psychology-today">Psychology Today</option>
-            <option value="counselling-directory">Counselling Directory</option>
-            <option value="social-media">Social media</option>
-            <option value="friend">From a friend or colleague</option>
-            <option value="other">Other</option>
-        </select>
-    </div> #}
     <button type="submit">Send message</button>
 </form>
