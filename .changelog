@@ -11,12 +11,18 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+----------
+
+
+## [1.1.1] - 2025-11-23
+
+### Removes
 - Removes contact details from site
+
+### Changes
 - Adds dynamic year to copyright details in footer
 - Greyscales the footer logo
 - Restructures JavaScript files to make included files more obvious
-
-----------
 
 
 ## [1.1.0] - 2025-11-23
