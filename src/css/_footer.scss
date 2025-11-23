@@ -23,6 +23,17 @@ footer {
     }
   }
 
+  .logo {
+
+    [fill="#dbad21"],
+    [fill="#5c8e8a"] {
+      fill: variables.$colour--grey-light;
+    }
+
+    [fill="#816c2c"] {
+      fill: variables.$colour--white;
+    }
+  }
 
   .logo-icon {
     position: absolute;
