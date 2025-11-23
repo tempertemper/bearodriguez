@@ -1,0 +1,67 @@
+---
+title: Contact Bea
+description: Get in touch to ask questions or arrange a free initial consultation for in-person or online therapy.
+intro: Starting therapy can feel like a big step; reaching out is the first part of that. You're welcome to get in touch to ask questions or arrange a free initial consultation.
+illustration: bust.svg
+layout: default
+permalink: contact.html
+---
+
+<form
+    name="contact"
+    method="post"
+    action="/thank-you"
+    data-netlify="true"
+    netlify-honeypot="website"
+>
+    {# Netlify form name #}
+    <input type="hidden" name="form-name" value="contact">
+
+    {# Honeypot field for spam bots #}
+    <p hidden>
+        <label for="website">Leave this field blank</label>
+        <input id="website" name="website" autocomplete="off">
+    </p>
+    <div>
+        <label for="name">Name</label>
+        <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            aria-required="true"
+        >
+    </div>
+    <div>
+        <label for="email">Email address</label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            aria-required="true"
+        >
+    </div>
+    <div>
+        <label for="phone">Phone number (optional)</label>
+        <input
+            id="phone"
+            name="phone"
+            inputmode="tel"
+            autocomplete="tel"
+        >
+    </div>
+    <div>
+        <label for="message">What would you like to explore?</label>
+        <div id="message-hint">Maximum 1000 characters.</div>
+        <textarea
+            id="message"
+            name="message"
+            aria-describedby="message-hint"
+            rows="6"
+            aria-required="true"
+        ></textarea>
+    </div>
+    <button type="submit">Send message</button>
+</form>

@@ -25,11 +25,15 @@ export default function(eleventyConfig) {
     const jsOutDir = "dist/assets/js";
     fs.mkdirSync(jsOutDir, { recursive: true });
     await esbuild.build({
-      entryPoints: ["src/js/index.js"],
+      entryPoints: [
+        "src/js/scripts.js",
+        "src/js/forms.js"
+      ],
       bundle: true,
       minify: true,
       sourcemap: true,
-      outfile: path.join(jsOutDir, "scripts.js"),
+      outdir: jsOutDir,
+      entryNames: "[name]",
       logLevel: "silent"
     });
     console.log("✓ JS bundled: src/js/*.js → dist/assets/js/scripts.js");

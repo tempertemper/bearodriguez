@@ -14,6 +14,25 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [1.1.0] - 2025-11-23
+
+### Adds
+- Adds 'message received' page
+- Introduces mechanism to prevent search indexing
+- Introduces text input and textarea styling
+- Adds contact form to contact page
+- Adds JavaScript validation to contact form
+- Adds error summary pattern with links to validation issues in form
+
+### Changes
+- Uses intro for page description if no explicit description front matter is set
+- Softens focus radius for links
+
+### Fixes
+- Fixes button text colour change on hover in light mode
+- Fixes white text contrast ratio against teal
+
+
 ## [1.0.4] - 2025-11-12
 
 ### Changes
