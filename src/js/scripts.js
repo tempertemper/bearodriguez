@@ -1,1 +1,1 @@
-import "./link-buttons.js"
+import "./general/link-buttons.js"
