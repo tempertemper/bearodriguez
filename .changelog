@@ -30,6 +30,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fixes
 - Fixes button text colour change on hover in light mode
+- Fixes white text contrast ratio against teal
 
 
 ## [1.0.4] - 2025-11-12

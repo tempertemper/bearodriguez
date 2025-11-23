@@ -26,7 +26,7 @@
 }
 
 $highlight-themes: (
-  teal:   (bg: variables.$colour--teal,      fg: variables.$colour--white),
+  teal:   (bg: variables.$colour--teal,      fg: variables.$colour--pure-white),
   yellow: (bg: variables.$colour--yellow,    fg: variables.$colour--black),
   grey:   (bg: variables.$colour--grey-dark, fg: variables.$colour--white),
   black:  (bg: variables.$colour--black,     fg: variables.$colour--white)
@@ -80,6 +80,10 @@ $highlight-themes: (
   h5,
   h6 {
     font-weight: $heading-weight;
+
+    @if $theme == teal {
+      color: variables.$colour--white;
+    }
   }
 
   &::before,
