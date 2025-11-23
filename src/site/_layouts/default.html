@@ -10,5 +10,10 @@
         </main>
         {% include "footer.html" %}
         <script src="/assets/js/scripts.js"></script>
+        {% if page.url == '/contact.html' %}
+            <script src="/assets/js/forms.js"></script>
+        {% else %}
+            <script src="/assets/js/forms.js" defer></script>
+        {% endif %}
     </body>
 </html>

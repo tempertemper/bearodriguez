@@ -3,29 +3,21 @@
 
 form {
   max-width: 30em;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-
-    + div {
-      margin-top: 1em;
-    }
-  }
 }
 
 input,
 textarea {
-  border: 3px solid variables.$colour--red;
+  border: 3px solid variables.$colour--teal;
   background-color: transparent;
-  border-radius: .25em;
+  border-radius: .5em;
   padding: .5em 1em;
+  width: 100%;
   @include mixins.dark-mode() {
     border-width: 2px;
   }
 
   &:focus-visible {
-    outline: 3px solid variables.$colour--red;
+    outline: 3px solid variables.$colour--teal;
     outline-offset: 2px;
     @include mixins.dark-mode() {
       outline-width: 2px;
@@ -36,10 +28,64 @@ textarea {
 
 label {
   font-weight: 700;
+  display: block;
+  margin-top: 1em;
 }
 
 [type="submit"] {
   margin-top: 1em;
   @include mixins.button;
   padding: .5em 1em;
+}
+
+.form-error  {
+
+  + *:target {
+    scroll-margin-block-start: 3em;
+
+    [id$="hint"] + & {
+      scroll-margin-block-start: 4.5em;
+    }
+  }
+}
+
+.error-summary {
+  border: .25em solid variables.$colour--red;
+  border-radius: 1em;
+  padding: 1.25em 1em;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ul {
+    padding-left: 1em;
+    margin-bottom: 0;
+  }
+
+  li::marker {
+    color: variables.$colour--red;
+  }
+}
+
+.error-summary h2,
+.form-error  {
+
+  &::before {
+    content: "!";
+    background-color: variables.$colour--red;
+    color: variables.$colour--white;
+    font-weight: 700;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .25em;
+  }
 }

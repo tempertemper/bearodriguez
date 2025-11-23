@@ -29,8 +29,7 @@ permalink: contact.html
             name="name"
             type="text"
             autocomplete="name"
-            maxlength="200"
-            required
+            aria-required="true"
         >
     </div>
     <div>
@@ -41,8 +40,7 @@ permalink: contact.html
             type="email"
             inputmode="email"
             autocomplete="email"
-            maxlength="200"
-            required
+            aria-required="true"
         >
     </div>
     <div>
@@ -51,20 +49,18 @@ permalink: contact.html
             id="phone"
             name="phone"
             inputmode="tel"
-            maxlength="20"
             autocomplete="tel"
         >
     </div>
     <div>
         <label for="message">What would you like to explore?</label>
-        <div id="messageHint">Maximum 1000 characters</div>
+        <div id="message-hint">Maximum 1000 characters.</div>
         <textarea
             id="message"
             name="message"
-            aria-describedby="messageHint"
+            aria-describedby="message-hint"
             rows="6"
-            maxlength="1000"
-            required
+            aria-required="true"
         ></textarea>
     </div>
     <button type="submit">Send message</button>

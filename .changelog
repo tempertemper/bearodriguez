@@ -17,6 +17,9 @@ All notable changes to this project will be documented in this file. The format 
 - Softens focus radius for links
 - Introduces text input and textarea styling
 - Adds contact form to contact page
+- Fixes button text colour change on hover in light mode
+- Adds JavaScript validation to contact form
+- Adds error summary pattern with links to validation issues in form
 
 ----------
 

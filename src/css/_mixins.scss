@@ -105,6 +105,8 @@ $highlight-themes: (
   $_background: if($background != null, $background, variables.$colour--red);
   $_foreground: if($colour != null, $colour, variables.$colour--white);
   display: inline-block;
+  border-radius: .5em;
+  text-decoration: none;
 
   @if $secondary == true {
     background-color: transparent;
@@ -119,6 +121,7 @@ $highlight-themes: (
     &:hover {
       background-color: rgba(0, 0 , 0, 0.05);
       border-color: color-mix(in srgb, currentColor 90%, transparent);
+      color: color-mix(in srgb, currentColor 90%, transparent);
     }
 
     &:focus-visible {
@@ -148,13 +151,6 @@ $highlight-themes: (
         outline-offset: 3px;
       }
     }
-  }
-
-  border-radius: .5em;
-  text-decoration: none;
-
-  &:hover {
-    color: color-mix(in srgb, currentColor 90%, transparent);
   }
 
   &:active {
