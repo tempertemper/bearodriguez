@@ -67,6 +67,9 @@ export default function(eleventyConfig) {
     return colours[(col + (row % 3)) % 3];
   });
 
+  // Current year/date
+  eleventyConfig.addFilter('getCurrentYear', () => new Date().getFullYear());
+
   // Passthroughs
   eleventyConfig.addPassthroughCopy({ "src/img": "assets/img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "assets/fonts" });

@@ -1,2 +1,2 @@
-import "./form-validation.js"
-import "./error-summary-links.js"
+import "./forms/validation.js"
+import "./forms/error-summary-links.js"
