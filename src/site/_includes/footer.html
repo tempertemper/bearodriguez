@@ -13,7 +13,7 @@
         <li>Telephone <a href="tel:{{ site.author.tel | replace('07', '00447') | replace(' ', '') }}">{{ site.author.tel }}</a></li>
     </ul>
     {% include "svg/logo.svg" %}
-    <p>&copy; 2025 Bea Rodriguez</p>
+    <p>&copy; copyright {{ "" | getCurrentYear }} Bea Rodriguez</p>
     <p class="credits">Visual identity and website <a href="https://www.designbyant.co.uk">Design by Ant</a>; user experience design and website build by <a href="https://www.tempertemper.net">tempertemper</a>.</p>
     {% include "svg/logo-icon--footer.svg" %}
 </footer>
