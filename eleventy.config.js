@@ -1,7 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import sass from "sass";
+import markdownIt from "markdown-it";
 import * as esbuild from "esbuild";
+
+const mdEngine = markdownIt({
+  html: true,
+  typographer: true
+});
 
 export default function(eleventyConfig) {
 
@@ -37,6 +43,22 @@ export default function(eleventyConfig) {
       logLevel: "silent"
     });
     console.log("✓ JS bundled: src/js/*.js → dist/assets/js/scripts.js");
+  });
+
+  // Smart quotes / inline markdown
+  eleventyConfig.addFilter("smart", function (value) {
+    if (value == null) {
+      return "";
+    }
+    return mdEngine.renderInline(String(value));
+  });
+
+  // Markdown filter
+  eleventyConfig.addFilter("markdown", function (value) {
+    if (value == null) {
+      return "";
+    }
+    return mdEngine.render(String(value));
   });
 
   // Order items if they have the 'order' front matter key

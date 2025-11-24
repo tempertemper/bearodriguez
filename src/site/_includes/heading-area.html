@@ -1,7 +1,7 @@
 <div class="heading-area">
     <hgroup aria-label="Heading">
-        <h1>{{ title }}</h1>
-        <p>{{ intro }}</p>
+        <h1>{{ title | smart | safe }}</h1>
+        {{ intro | markdown | safe }}
     </hgroup>
     {%- if homepage %}
         <picture>
