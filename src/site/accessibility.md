@@ -1,6 +1,7 @@
 ---
 title: Accessibility statement
-intro: I am committed to ensuring digital accessibility for everyone, including people with disabilities.
+intro: |
+    I am committed to ensuring digital accessibility for everyone, including people with disabilities.
 permalink: accessibility.html
 layout: default.html
 ---

@@ -14,6 +14,13 @@ All notable changes to this project will be documented in this file. The format 
 ----------
 
 
+## [1.1.2] - 2025-11-24
+
+### Changes
+- Markdown-ifies heading area intro
+- Adds a filter to page headings for smart quotes
+
+
 ## [1.1.1] - 2025-11-23
 
 ### Removes
